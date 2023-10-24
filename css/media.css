@@ -1,0 +1,942 @@
+@media (max-width:1800px){
+    .autoblogSliderNav{
+        max-width: 69%;
+    }
+}
+@media (max-width:1600px){
+    .header-list{
+        gap: 20px;
+    }
+    .autoblogSliderNav{
+        max-width: 67%;
+    }
+}
+@media (max-width:1500px){
+    button{
+        font-size: 16px;
+        padding: 9px 25px 12px 25px;
+    }
+    .header a{
+        font-size: 15px;
+    }
+    .phoneDropdown{
+        font-size: 20px;
+    }
+    .langBtn{
+        width: 35px;
+        height: 35px;
+        font-size: 14px !important;
+    }
+    .header-logo img{
+        max-width: 145px;
+    }
+    .header{
+        padding: 20px 30px;
+    }
+    .main-slider .owl-item img{
+        height: 671px;
+    }
+    .main-slider_item{
+        height: 650px;
+    }
+    .main-slider_text{
+        margin-top: 40px;
+    }
+    .main-slider_text p{
+        margin: 30px 0 50px 0;
+    }
+    .main-slider_text h2{
+        font-size: 38px;
+    }
+    .main-slider_text p,
+    .main-slider_text button{
+        font-size: 22px;
+    }
+    .popular-avto_links a{
+        width: 23%;
+    }
+}
+@media (max-width:1400px){
+    .about_trade-in__avto{
+        gap: 20px;
+    }
+    .about_trade-in__avto a,
+    .olam-info_slider--card span{
+        font-size: 20px;
+    } 
+    .about_trade-in__point span{
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+    }
+    .newavto-slider_item span,
+    .autoblog-slider_item span{
+        font-size: 40px;
+    }
+    .last-point p,
+    .about_trade-in h6,
+    .newavto-slider_item--text h6{
+        font-size: 22px;
+    }
+    .newavto-slider_item--text{
+        max-width: 270px;
+    }
+    .about_trade-in__points{
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+    .newavto-slider_item--btns{
+        margin-top: 40px;
+    }
+    .newavto-slider .owl-nav{
+        right: 25%;
+    }
+    .oldavto-item_info h5,
+    .oldavto-item_info p,
+    .olam-info_slider--card h6,
+    .autoblog-slider_text a{
+        font-size: 22px;
+    }
+    .olam-info_slider--card img:nth-of-type(1){
+        max-width: 185px;
+        z-index: 1;
+    }
+    .olam-info_slider--card_content{
+        padding: 60px 20px 20px 20px;
+    }
+    .olam-info_slider--card img:nth-of-type(3){
+        right: -60px;
+        bottom: -50px;
+    }
+    .olam-info_img1{
+        max-width: 350px !important;
+    }
+    .two-card .olam-info_slider--card_text{
+        max-width: 325px;
+    }
+    .customer-reviews img{
+        max-width: 500px;
+        height: 86%;
+        object-fit: cover;
+    }
+    .customer-reviews_slider{
+        max-width: 940px;
+    }
+    .about-company_number h6{
+        font-size: 50px;
+    }
+    .about-company_number p,
+    .autoblog-slider_text p,
+    .autoblog-slider_text a{
+        font-size: 18px;
+    }
+    .about-company_numbers{
+        row-gap: 50px;
+    }
+    .questions-form{
+        margin-top: 80px;
+        margin-bottom: 95px;
+    }
+    .questions-form h6{
+        font-size: 38px;
+    }
+    .questions-form p{
+        font-size: 22px;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+    .questions-form_text, .questions-form_func, .questions-form_inpts{
+        max-width: 560px;
+    }
+    #questionsFormSubmitBtn{
+        padding: 11px 45px 17px 45px;
+    }
+    .captcha{
+        width: 290px;
+    }
+    .questions-img_car{
+        left: 30px;
+    }
+    .seo-text{
+        padding: 100px 0 100px 0;
+    }
+    .footer-text{
+        margin-top: 0;
+    }
+    .footer-left{
+        max-width: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-right{
+        justify-content: space-between;
+    }
+    .footer{
+        padding: 100px 0 70px 0;
+    }
+    .footer-adres{
+        max-width: unset;
+    }
+    .footer-avto_list{
+        max-width: 600px;
+    }
+    .footer-phone{
+        font-size: 50px;
+    }
+    .footer-contacts svg{
+        width: 45px;
+        height: 45px;
+    }
+    .search-avto{
+        padding: 50px 30px 70px 30px;
+    }
+    .search-avto_selects .custom-select-wrapper{
+        width: 47%;
+    }
+    .search-avto_credit{
+        position: relative;
+        top: 0;
+    }
+    .search-avto_left-btns{
+        display: flex;
+        gap: 100px;
+        margin-bottom: 0;
+    }
+    .search-avto_btns{
+        margin-top: 60px;
+    }
+    .search-avto_btns{
+        align-items: center;
+    }
+}
+@media (max-width:1200px){
+    .header-logo{
+        display: none;
+    }
+    .burger{
+        display: flex;
+    }
+    .main-slider .owl-nav{
+        display: none;
+    }
+    .main-slider_img{
+        width: 49%;
+    }
+    .main-slider .owl-item img{
+        height: 421px;
+    }
+    .main-slider_item{
+        height: 640px;
+    }
+    .main-slider .owl-dots{
+        bottom: 300px;
+    }
+    .main-slider_form{
+        max-width: unset;
+        width: 100%;
+        left: -30px;
+        padding: 50px 50px 50px 60px;
+    }
+    .langBtn{
+        width: 50px;
+        height: 50px;
+    }
+    .about_trade-in__point p, .newavto-slider_item--text p,
+    .newavto-slider_item--btns a{
+        font-size: 17px;
+    }
+    .about_trade-in__avto a{
+        font-size: 18px;
+    }
+    .title{
+        margin-bottom: 20px;
+    }
+    .newavto-slider_item--img img{
+        width: 95% !important;
+    }
+    .newavto-slider .owl-nav{
+        right: 29%;
+    }
+    .newavto-slider_item--btns,
+    .owl-nav{
+        gap: 20px;
+    }
+    .oldavto_slider .owl-nav{
+        top: -80px;
+    }
+    .link-to-page,
+    .oldavto-item_info--list li,
+    .olam-info_slider--card_text li, .olam-info_slider--card_text p{
+        font-size: 17px;
+    }
+    .title{
+        font-size: 38px;
+    }
+    .olam-info_slider--card_text ul{
+        max-width: 255px;
+    }
+    .two-card .olam-info_slider--card_text p{
+        max-width: 253px;
+    }
+    .two-card p{
+        margin: 20px 0 80px 0;
+    }
+    .customer-reviews img{
+        top: 50px;
+    }
+    .customer-reviews img{
+        max-width: 400px;
+    }
+    .customer-reviews_slider{
+        max-width: 840px;
+    }
+    .customer-reviews_slider--item p{
+        font-size: 18px;
+    }
+    .about-company_number h6{
+        font-size: 40px;
+    }
+    .about-company_number p,
+    .about-company_text p,
+    .popular-avto_links a{
+        font-size: 17px;
+    }
+    .about-company_numbers{
+        row-gap: 0;
+    }
+    .autoblog-slider_img img{
+        height: 600px;
+    }
+    .autoblog-slider_img,
+    .autoblogSliderNav{
+        width: 63%;
+    }
+    .popular-avto_links a{
+        width: 22%;
+    }
+    .questions-form_text, .questions-form_inpts{
+        max-width: 460px;
+    }
+    .questions-form_func{
+        max-width: unset;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+    .questions-form_checkbox{
+        max-width: 306px;
+    }
+    .seo-text_content{
+        max-height: 230px;
+    }
+    .seo-text h4{
+        font-size: 22px;
+    }
+    .footer-avto_list{
+        max-width: 460px;
+    }
+    .footer-phone{
+        font-size: 40px;
+    }
+    .footer-contacts svg{
+        width: 38px;
+        height: 38px;
+    }
+    .footer-right a{
+        font-size: 17px;
+    }
+    .search-avto_left-btns{
+        gap: 60px;
+    }
+}
+@media (max-width:992px){
+    .main-slider_img{
+        width: 39%;
+    }
+    .main-slider_form{
+        bottom: 0;
+    }
+    .main-slider .owl-dots{
+        bottom: 310px;
+    }
+    #mainSliderFindAvto{
+        margin-top: 20px;
+    }
+    .about_trade-in a{
+        font-size: 17px;
+        white-space: nowrap;
+    }
+    .about_trade-in__avto a{
+        width: 31%;
+    }
+    .about_trade-in__points{
+        flex-wrap: wrap;
+    }
+    .about_trade-in__point{
+        width: 49%;
+    }
+    .newavto-slider_item{
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+    }
+    .newavto-slider_item--text{
+        max-width: unset;
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .newavto-slider_item--text p{
+        max-width: 460px;
+    }
+    .newavto-slider_item span{
+        right: 0;
+    }
+    .newavto-slider .owl-nav{
+        display: none;
+    }
+    .newavto-slider .owl-dots{
+        bottom: 30%;
+    }
+    .newavto-slider,
+    .autoblog-slider,
+    .popular-avto{
+        margin-bottom: 100px;
+    }
+    .newavto-slider_item--img{
+        max-height: 400px;
+    }
+    .newavto-slider_item--img img{
+        width: 100% !important;
+    }
+    .oldavto_slider .owl-nav{
+        top: -70px;
+    }
+    .olam-info_slider--card img:nth-of-type(3){
+        right: 0;
+        bottom: 0;
+    }
+    .olam-info_slider--card_text,
+    .two-card .olam-info_slider--card_text{
+        max-width: 400px;
+    }
+    .olam-info_slider--card_text ul{
+        max-width: 280px;
+    }
+    .olam-info_slider .owl-dots{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .customer-reviews img{
+        display: none;
+    }
+    .customer-reviews_slider{
+        width: 100%;
+        max-width: unset;
+        left: unset;
+    }
+    .customer-reviews_slider--item h6{
+        font-size: 18px;
+    }
+    .customer-reviews_slider--item p{
+        font-size: 17px;
+    }
+    .customer-reviews_slider--item span{
+        font-size: 16px;
+    }
+    .customer-reviews_slider--item{
+        padding-bottom: 80px;
+    }
+    .customer-reviews .container{
+        margin: unset;
+        padding: 0;
+    }
+    .customer-reviews .title{
+        padding: 0 30px;
+    }
+    .customer-reviews{
+        margin: 100px 0;
+    }
+    .about-company_text{
+        margin-top: 30px;
+    }
+    .about-company_numbers{
+        justify-content: center;
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    .about-company_number{
+        width: 40%;
+    }
+    .autoblog-slider_img{
+        position: relative;
+        width: 100%;
+        left: 50px;
+    }
+    .autoblog-slider_img img{
+        height: 500px;
+    }
+    .autoblog-slider_item{
+        display: flex;
+        flex-direction: column-reverse;
+        overflow: hidden;
+    }
+    .autoblog-slider_item span{
+        position: absolute;
+        top: 0;
+        left: 30px;
+    }
+    .autoblog-slider_text{
+        padding-top: 60px;
+    }
+    .autoblog-slider{
+        flex-direction: column;
+    }
+    .autoblogSliderNav{
+        width: unset;
+        max-width: unset;
+        bottom: unset;
+        top: 500px;
+    }
+    .autoblog-slider_text{
+        max-width: unset;
+        display: flex;
+        justify-content: space-between;
+    }
+    .autoblog-slider_text div:first-child{
+        max-width: 550px;
+    }
+    .autoblog-slider_text .newavto-slider_item--btns{
+        margin-top: unset;
+    }
+    .autoblog-slider_text .newavto-slider_item--btns a{
+        white-space: nowrap;
+    }
+    .popular-avto_links a{
+        width: 30%;
+    }
+    .questions-form_inpts,
+    .footer-avto_list{
+        max-width: unset;
+    }
+    .questions-form p{
+        margin-bottom: 92px;
+    }
+    .questions-form{
+        margin-bottom: 73px;
+    }
+    .questions-form_func{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .questions-form_text{
+        max-width: 335px;
+    }
+    .seo-text p{
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .seo-text_moreBtn{
+        margin-top: 15px;
+    }
+    .seo-text{
+        padding: 70px 0 70px 0;
+    }
+    .footer-right{
+        flex-wrap: wrap;
+    }
+    .footer-avto_list li{
+        width: 30%;
+    }
+    .footer-main_links{
+        width: 20%;
+    }
+    .footer-credits{
+        width: 74%;
+        justify-content: space-around;
+    }
+    .search-avto_selects .custom-select-wrapper{
+        width: 97%;
+    }
+    .search-avto_ranges{
+        min-width: 320px;
+    }
+    .search-avto_left-btns{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .search-avto_credit{
+        max-width: 150px;
+    }
+    .search-avto_credit{
+        position: absolute;
+        top: -70px;
+    }
+    .search-avto_btns{
+        margin-top: 110px;
+    }
+    .search-avto_btns #mainSliderFindAvto{
+        margin-top: 0;
+    }
+}
+@media (max-width:768px){
+    .header-contacts{
+        gap: 30px;
+    }
+    .main-slider_img{
+        display: none;
+    }
+    .main-slider_text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-slider .owl-dots{
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    #mainSliderFindAvto{
+        align-self: flex-end;
+    }
+    .main-slider .owl-dots{
+        position: relative;
+        bottom: unset;
+        left: unset;
+        right: unset;
+    }
+    .main-slider_form{
+        
+    }
+    .main-slider_item{
+        height: unset;
+    }
+    .main-slider_text{
+        margin: 50px 0;
+    }
+    .form-container{
+        height: 330px;
+    }
+    .main-slider_form--tabs{
+        overflow: scroll;
+    }
+    .title{
+        text-align: center;
+    }
+    .about_trade-in,
+    .about-company,
+    .olam-info_slider,
+    .autoblog-slider,
+    .popular-avto{
+        margin-bottom: 70px;
+    }
+    .about_trade-in h6{
+        text-align: center;
+        max-width: unset;
+    }
+    .about_trade-in__point{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about_trade-in__avto a{
+        width: 48%;
+    }
+    .newavto-slider_item span{
+        right: unset;
+    }
+    .newavto-slider_item--img img{
+        margin-top: 100px;
+    }
+    .newavto-slider_item--text{
+        flex-direction: column;
+    }
+    .newavto-slider_item--btns{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .newavto-slider_item--btns a{
+        width: 48%;
+    }
+    .newavto-slider_item--text p{
+        max-width: unset;
+    }
+    .newavto-slider .owl-dots{
+        bottom: 38%;
+    }
+    .title{
+        font-size: 36px;
+    }
+    .oldavto-item_info{
+        display: flex;
+        justify-content: space-between;
+    }
+    .oldavto-allBtn{
+        align-self: flex-start;
+    }
+    .customer-reviews{
+        margin: 80px 0;
+    }
+    .about-company_number{
+        text-align: center;
+    }
+    .autoblog-slider_text,
+    .questions-form_inpts{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .autoblog-slider_content{
+        display: flex;
+        justify-content: center;
+    }
+    .autoblog-slider_text div:first-child,
+    .questions-form_text,
+    .questions-form_checkbox{
+        max-width: unset;
+    }
+    .autoblog-slider_img{
+        left: 0;
+    }
+    .autoblog-slider_img img{
+        height: 450px;
+    }
+    .autoblog-slider_item span{
+        left: unset;
+    }
+    .autoblogSliderNav{
+        top: 450px;
+    }
+    .popular-avto_links a{
+        width: 48%;
+    }
+    .popular-avto_links{
+        gap: 20px;
+    }
+    .questions img{
+        display: none;
+    }
+    .questions-form_text{
+        text-align: center;
+    }
+    .questions-form{
+        margin-top: 60px;
+        margin-bottom: 70px;
+    }
+    .questions-form input[type="text"]{
+        width: 100%;
+    }
+    .questions-form p{
+        margin-bottom: 50px;
+    }
+    .seo-text_content{
+        max-height: 283px;
+    }
+    .seo-text{
+        padding: 50px 0 50px 0;
+    }
+    .footer-left{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+    .footer{
+        padding: 50px 0;
+    }
+    .footer-right li{
+        margin-bottom: 10px;
+    }
+    .footer-right{
+        gap: 20px;
+    }
+    .footer-avto_list li:first-of-type{
+        width: 30%;
+    }
+    .footer-main_links{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-main_links li{
+        width: 48%;
+    }
+    .car-type{
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+    .car-type_item{
+        white-space: nowrap;
+    }
+    .car-type::-webkit-scrollbar{
+        display: none;
+    }
+    .search-avto_ranges{
+        min-width: 260px;
+    }
+    .search-avto_btns{
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+    .search-avto_btns-right{
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+@media (max-width:576px){
+    .container{
+        padding: 0 20px;
+    }
+    .header{
+        padding: 20px;
+    }
+    .custom-select-wrapper{
+        width: 100%;
+    }
+    #mainSliderFindAvto{
+        width: 100%;
+    }
+    .main-slider_form{
+        left: 0;
+        padding: 50px 20px;
+    }
+    .main-slider_form--tabs{
+        margin-bottom: 30px;
+    }
+    .main-slider_text p, .main-slider_text button{
+        font-size: 20px;
+    }
+    .offcanvas-body{
+        margin: 0 50px 0 50px;
+    }
+    .offcanvas-footer{
+        padding: 25px 50px 30px 50px;
+        height: 40%;
+    }
+    .offcanvas.offcanvas-end{
+        width: 100%;
+    }
+    .about_trade-in__point,
+    .about_trade-in__avto a{
+        width: 100%;
+    }
+    .about_trade-in h6{
+        font-size: 20px;
+    }
+    .about_trade-in{
+        margin-bottom: 70px;
+    }
+    .newavto-slider_item--btns{
+        flex-direction: column;
+    }
+    .newavto-slider_item--btns a,
+    .footer-avto_list li,
+    .footer-avto_list li:first-of-type{
+        width: 100%;
+    }
+    .newavto-slider_item--img{
+        max-height: 330px;
+    }
+    .newavto-slider .owl-dots{
+        bottom: 51%;
+    }
+    .newavto-slider_item span{
+        font-size: 30px;
+        width: 100%;
+        padding: 5px 50px 10px 50px;
+        text-align: center;
+        border-radius: 15px;
+    }
+    .newavto-slider_item--text{
+        margin-top: 30px;
+    }
+    .oldavto-item_info{
+        display: flex;
+        flex-direction: column;
+    }
+    .oldavto_slider .owl-nav{
+        display: none;
+    }
+    .olam-info_slider--card img:nth-of-type(3){
+        display: none;
+    }
+    .olam-info_slider--card span{
+        top: 0;
+        left: 0;
+    }
+    .olam-info_slider--card{
+        margin: 0;
+    }
+    .olam-info_slider--card_content{
+        padding-top: 75px;
+    }
+    .two-card .olam-info_slider--card_text p{
+        margin-top: 30px;
+    }
+    .customer-reviews_slider--item p{
+        font-size: 16px;
+    }
+    .customer-reviews_slider .owl-dots{
+        bottom: 20px;
+    }
+    .customer-reviews_slider--item{
+        padding-bottom: 60px;
+    }
+    .about-company_number{
+        width: 100%;
+    }
+    .autoblog-slider_item span{
+        font-size: 30px;
+    }
+    .autoblog-slider_img img{
+        height: 300px;
+    }
+    .autoblogSliderNav{
+        top: 300px;
+    }
+    .popular-avto_links a,
+    #questionsFormSubmitBtn,
+    .footer-main_links li{
+        width: 100%;
+    }
+    .questions-form{
+        margin-top: 50px;
+    }
+    .questions-form h6{
+        font-size: 36px;
+    }
+    .questions-form p{
+        font-size: 18px;
+    }
+    .seo-text_content{
+        max-height: 383px;
+    }
+    .footer-right{
+        gap: 10px;
+    }
+    .search-avto_ranges{
+        max-width: unset;
+    }
+    .search-avto_btns-right{
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+    #mainSliderFindAvto{
+        align-self: flex-start;
+    }
+}
+@media (max-width:400px){
+    .newavto-slider .owl-dots{
+        bottom: 57%;
+    }
+    .seo-text_content{
+        max-height: 486px;
+    }
+}

@@ -1,0 +1,68 @@
+  /* manrope */
+  @font-face{
+    font-family: 'manrope';
+    src: url(../fonts/manrope/Manrope-Light.ttf) format('truetype');
+    font-weight: 300;
+  }
+  @font-face{
+    font-family: 'manrope';
+    src: url(../fonts/manrope/Manrope-Regular.ttf) format('truetype');
+    font-weight: 400;
+  }
+  @font-face{
+    font-family: 'manrope';
+    src: url(../fonts/manrope/Manrope-Medium.ttf) format('truetype');
+    font-weight: 500;
+  }
+  @font-face{
+    font-family: 'manrope';
+    src: url(../fonts/manrope/Manrope-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+  }
+  @font-face{
+    font-family: 'manrope';
+    src: url(../fonts/manrope/Manrope-Bold.ttf) format('truetype');
+    font-weight: 700;
+  }
+  /* RFDewiExtended */
+  @font-face{
+    font-family: 'RF Dewi Extended';
+    src: url(../fonts/RFDewiExtended/RFDewiExtended-Light.ttf) format('truetype');
+    font-weight: 300;
+  }
+  @font-face{
+    font-family: 'RF Dewi Extended';
+    src: url(../fonts/RFDewiExtended/RFDewiExtended-Regular.ttf) format('truetype');
+    font-weight: 400;
+  }
+  @font-face{
+    font-family: 'RF Dewi Extended';
+    src: url(../fonts/RFDewiExtended/RFDewiExtended-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+  }
+  @font-face{
+    font-family: 'RF Dewi Extended';
+    src: url(../fonts/RFDewiExtended/RFDewiExtended-Bold.ttf) format('truetype');
+    font-weight: 700;
+  }
+  @font-face{
+    font-family: 'RF Dewi Extended';
+    src: url(../fonts/RFDewiExtended/RFDewiExtended-Ultrabold.ttf) format('truetype');
+    font-weight: 800;
+  }
+  /* icons */
+  @font-face{
+    font-family: 'icons';
+    src: url(../fonts/icons/fa-light-300.ttf) format('truetype');
+    font-weight: 300;
+  }
+  @font-face{
+    font-family: 'icons';
+    src: url(../fonts/icons/fa-regular-400.ttf) format('truetype');
+    font-weight: 400;
+  }
+  @font-face{
+    font-family: 'icons';
+    src: url(../fonts/icons/fa-solid-900.ttf) format('truetype');
+    font-weight: 900;
+  }
