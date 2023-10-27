@@ -136,7 +136,8 @@ a{
     visibility: hidden;
     z-index: 1000;
     font-size: 22px;
-    border: 2px solid var(--white2);
+    /* border: 2px solid var(--white2); */
+    background: var(--white1);
     cursor: pointer;
 }
 /* title */
@@ -178,24 +179,20 @@ a{
     background: none;
     cursor: pointer;
     transition: all 0.3s;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--grey1);
 }
 .custom-select-trigger:after {
     position: absolute;
     display: block;
-    content: '';
-    width: 10px; height: 10px;
-    top: 50%; right: 10px;
-    margin-top: -12px;
-    border-bottom: 2px solid var(--red3);
-    border-right: 2px solid var(--red3);
-    transform: rotate(45deg) translateY(-50%);
+    content: '\f078';
+    font-size: 15px;
+    top: 0; right: 10px;
+    transform: rotate(0deg);
     transition: all 0.4s ease-in-out;
-    transform-origin: 50% 0;
+    color: var(--red3);
 }
 .custom-select.opened .custom-select-trigger:after {
-    margin-top: 3px;
-    transform: rotate(-135deg) translateY(-50%);
+    transform: rotate(180deg);
 }
 .custom-options {
     max-height: 540px;
@@ -705,6 +702,7 @@ button{
     margin-bottom: 40px;
     position: absolute;
     z-index: 3;
+    top: 0;
 }
 .newavto-slider_item--text h6{
     max-width: unset;
@@ -799,6 +797,7 @@ button{
     z-index: 3;
     position: relative;
 }
+.avtobanner span,
 .olam-info_slider--card span{
     color: var(--txt-black, #262627);
     font-family: RF Dewi Extended;
@@ -818,6 +817,7 @@ button{
     display: block;
 }
 .olam-info_slider--card_text li,
+.avtobanner li,
 .olam-info_slider--card_text p{
     color: var(--txt-black, #262627);
     font-size: 18px;
@@ -826,6 +826,7 @@ button{
     line-height: 150%;
     list-style: disc;
 }
+.avtobanner ul,
 .olam-info_slider--card_text ul{
     display: flex;
     flex-direction: column;
@@ -833,6 +834,7 @@ button{
     margin: 20px 20px 30px 20px;
     max-width: 325px;
 }
+.avtobanner a,
 .olam-info_slider--card_text a{
     color: var(--red3);
     font-family: RF Dewi Extended;
@@ -856,13 +858,12 @@ button{
     max-width: 330px;
 }
 /* oldAvto */
-.oldavto-item{
-
-}
+.avto-item_img img,
+.avto-item,
 .oldavto-item_img img{
     position: relative;
-    
 }
+.avto-item_img span,
 .oldavto-item_img span{
     color: var(--txt-grey-dark, #5E5E5E);
     font-family: RF Dewi Extended;
@@ -878,25 +879,35 @@ button{
     border-left: 1px solid var(--white2);
     background: var(--white1);
 }
+.avto-item_func,
 .oldavto-item_func{
     position: absolute;
     top: 10px;
     left: 10px;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 #credit{
     color: var(--red2);
     border-right: 1px solid var(--red2);
     border-left: 1px solid var(--red2);
 }
+#new{
+    border-right: 1px solid var(--green2);
+    border-left: 1px solid var(--green2);
+    color: var(--green2);
+}
+.avto-item_info,
 .oldavto-item_info{
     padding: 15px 20px;
 }
+.avto-item_info--list,
 .oldavto-item_info--list{
     display: flex;
     gap: 70px;
 }
+.avto-item_info h5,
 .oldavto-item_info h5{
     color: var(--txt-grey-dark, #5E5E5E);
     font-family: RF Dewi Extended;
@@ -905,6 +916,7 @@ button{
     font-size: 28px;
     font-weight: 700;
 }
+.avto-item_info p,
 .oldavto-item_info p{
     font-family: RF Dewi Extended;
     font-style: normal;
@@ -914,6 +926,7 @@ button{
     font-size: 28px;
     margin-bottom: 15px;
 }
+.avto-item_info--list li,
 .oldavto-item_info--list li{
     color: var(--black);
     font-family: Manrope;
@@ -923,9 +936,11 @@ button{
     line-height: 150%;
     margin-bottom: 5px;
 }
+.avto-item_info--list_options li,
 .oldavto-item_info--list_options li{
     color: var(--grey2);
 }
+.avto-item:hover h5,
 .oldavto-item:hover h5{
     color: var(--black);
 }
@@ -1034,7 +1049,8 @@ button{
     display: block;
 }
 /* autoblog slider */
-.autoblog-slider{
+.autoblog-slider,
+.avto-description{
     display: flex !important;
     flex-direction: column-reverse;
 }
@@ -1060,14 +1076,16 @@ button{
     margin-top: 57px;
 }
 .autoblog-slider .owl-nav,
-.autoblog-slider .owl-dots{
+.autoblog-slider .owl-dots,
+.avto-description .owl-nav,
+.avto-description .owl-dots{
     position: relative;
     z-index: 6;
 }
 .autoblogSliderNav{
     position: absolute;
     bottom: 30px;
-    padding: 0 20px;
+    padding: 0 30px;
     right: 0;
     max-width: 72%;
     display: flex;
@@ -1585,4 +1603,518 @@ button{
 }
 .icon-chevroneDown.active::before{
     transform: rotate(180deg);
+}
+/* avto filter */
+.avto-filter{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+.avto-filter button{
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+#avto-filter_resetBtn,
+.avto-filter_main p{
+    color: var(--grey3);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    pointer-events: none;
+}
+#avto-filter_resetBtn.active{
+    pointer-events: all;
+    color: var(--black);
+}
+.avto-filter_main p{
+    color: var(--black);
+}
+.avto-filter_sortBtn{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    pointer-events: none;
+}
+.avto-filter_sortBtn.active{
+    pointer-events: all;
+}
+.avto-filter_sortBtn.active svg path{
+    stroke: var(--black);
+}
+.avto-filter_main .custom-select-wrapper{
+    width: 380px;
+}
+.avto-filter_main .custom-select-trigger:after{
+    right: 60px;
+}
+.avto-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.avto-item{
+    width: 31%;
+}
+.avto-item_img img{
+    width: 100%;
+    object-fit: contain;
+}
+/* avtocredit */
+.avtobanner{
+    position: relative;
+    width: 100%;
+    background: var(--white2);
+    margin: 150px 20px;
+}
+.avtobanner-content{
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    overflow: hidden;
+    padding: 70px 80px 50px 80px;
+    position: relative;
+}
+.avtobanner img{
+    position: absolute;
+}
+.avtobanner img:nth-of-type(1){
+    left:-122px;
+    bottom: 0;
+    width: 45%;
+    object-fit: cover;
+    height: 100%;
+}
+.avtobanner img:nth-of-type(2){
+    top: 0;
+    right: 0;
+    width: 23%;
+}
+.avtobanner img:nth-of-type(3){
+    bottom: 0;
+    right: 0;
+    width: 37%;
+}
+.avtobanner h5{
+    color: var(--white1);
+    font-family: RF Dewi Extended;
+    font-style: normal;
+    line-height: 130%;
+    font-weight: 700;
+    font-size: 44px;
+    margin-bottom: 40px;
+}
+.avtobanner-text_l,
+.avtobanner-text_r{
+    position: relative;
+    z-index: 2;
+}
+.avtobanner-text_l{
+    max-width: 426px;
+}
+.avtobanner-text_r{
+    max-width: 318px;
+}
+.avtobanner li{
+    font-size: 20px;
+}
+.avtobanner ul{
+    margin: 20px 0 0 20px;
+}
+.avtobanner-text_r h6{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+.rate-img3{
+    height: 100%;
+    object-fit: contain;
+    width: 37% !important;
+}
+.rateCar .avtobanner-text_l{
+    max-width: 670px;
+}
+.rateCar .avtobanner-text_l h5{
+    color: var(--black);
+}
+.rateCar .avtobanner-text_l p{
+    color: var(--txt-black, #262627);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 50px;
+}
+.rate-img1{
+    bottom: unset !important;
+    top: 0;
+    object-fit: contain !important;
+    height: 110% !important;
+    top: -270px;
+    left: -100px !important;
+}
+.rate-img2{
+    top: unset !important;
+    bottom: 0;
+    right: 30% !important;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 70px 0 150px 0;
+}
+.pagination-item{
+    border-radius: 50%;
+    display: block;
+}
+.pagination-item a{
+    padding: 9px 17px 11px 17px;
+    border: 2px solid var(--white1);
+    color: var(--black);
+    border-radius: 50%;
+    text-align: center;
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    display: block;
+}
+.pagination-item.active{
+    border: 2px solid var(--green2);
+}
+.pagination-item.active a{
+    color: var(--green2);
+}
+.prev-page,
+.next-page{
+    border: 2px solid var(--grey2);
+    margin: 0 10px;
+}
+.prev-page a,
+.next-page a{
+    color: var(--grey2);
+}
+/* user agree */
+.user-agree{
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px solid var(--grey3);
+}
+.user-agree p{
+    color: var(--grey1);
+    font-size: 15px;
+    line-height: 150%;
+}
+/* newavto */
+.newavto{
+    margin-bottom: 150px;
+}
+.newavto .newavto-slider_item{
+    margin-bottom: 150px;
+    position: relative;
+}
+.newavto .left{
+    left: 0;
+}
+/* new avto */
+.avto-color-name{
+    margin-left: 20px;
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    display: none;
+}
+.avto-color-name.is-active{
+    display: inline-block;
+}
+.avto-color{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+.avto-color a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.avto-color a.is-active{
+    border: 2px solid var(--white1);
+    outline: 2px solid var(--grey3);
+}
+.car-color-img{
+    display: none;
+}
+.car-color-img.is-active{
+    display: block;
+}
+.avto-options_back{
+    display: block;
+    background: var(--white2);
+    height: 100%;
+    width: 56%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.avto-options,
+.avto-equipment{
+    position: relative;
+    z-index: 2;
+}
+.avto-equipment{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 460px;
+}
+.avto-equipment_item h6{
+    color: var(--red3);
+    font-family: RF Dewi Extended;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.avto-equipment_item p,
+.avto-options h6,
+.download-price{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-style: normal;
+    line-height: 150%; 
+    font-weight: 600;
+    font-size: 20px;
+}
+.avto-options h6{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 30px;
+}
+.avto-options_list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.avto-options_list li{
+    color: var(--txt-black, #262627);
+    font-size: 18px;
+    font-style: normal;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.download-price{
+    font-size: 18px;
+    margin-top: 60px;
+    display: block;
+    color: var(--grey1);
+}
+.avto-text{
+    padding: 80px 90px;
+    background: var(--white2);
+    margin: 150px auto;
+    max-width: 1620px;
+}
+.avto-text p{
+    color: var(--grey1);
+    font-size: 16px;
+    font-style: normal;
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+.avto-text_btn{
+    color: var(--txt-grey-dark, #5E5E5E);
+    font-family: RF Dewi Extended;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    margin-top: 15px;
+    display: none;
+}
+/* avto description */
+.avto-descriptions{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.avto-description_item{
+    height: 650px;
+    position: relative;
+}
+.avto-description_img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 68%;
+    height: 100%;
+}
+.avto-description.left .avto-description_img,
+.avto-description.left .autoblogSliderNav{
+    right: unset;
+    left: 0;
+    flex-direction: row-reverse;
+}
+.avto-description_img img{
+    height: 100%;
+    object-fit: cover;
+}
+.avto-description_text{
+    max-width: 339px;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 2;
+    background: var(--white1);
+    padding: 5px;
+}
+.avto-description_text h6{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+.avto-description_text p{
+    color: var(--txt-black, #262627);
+    font-size: 18px;
+    font-style: normal;
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+.avto-descriptions .owl-prev,
+.avto-descriptions .owl-next{
+    border: 1px solid var(--white2) !important;
+}
+.avto-descriptions .owl-prev span,
+.avto-descriptions .owl-next span{
+    color: var(--white2);
+}
+.avto-btns button,
+.avto-btns a{
+    width: 290px;
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; 
+    border-radius: 100px;
+    padding: 11px 30px 17px 30px;
+}
+.avto-btns a{
+    color: var(--grey1);
+    border:1px solid var(--grey1);
+}
+.avto-btns button{
+    color: var(--white1);
+    border:1px solid var(--red3);
+    outline: none;
+    background: var(--red3);
+}
+.avto-btns.fixed{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    background: var(--white1);
+    padding: 25px;
+}
+.tradeinModal{
+    border-radius: unset;
+}
+.tradeinModal .btn-close{
+    border: none;
+    background-image: url(/image/icons/dark-x.png);
+    padding: 0 !important;
+    margin: 0 !important;
+    background-size: 30px;
+}
+.tradeinModal .modal-header{
+    padding: 20px;
+    border-bottom: none;
+}
+.tradeinModal .modal-body{
+    padding: 0 90px 90px;
+}
+#tradeinModal .modal-dialog{
+    max-width: 825px;
+}
+.tradeinModal p{
+    color: var(--txt-black, #262627);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 150%;
+}
+.tradeinModal .tradeinModal-btn{
+    color: var(--white1);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    background: var(--green2);
+    border: none;
+}
+.modal-backdrop{
+    --bs-backdrop-bg: #fff;
+}
+.ratecarModal{
+    max-width: unset;
+    margin: 0;
+}
+.ratecarModal .modal-content{
+    border-radius: 0;
+    /* border: none; */
+    height: 100vh;
+}
+.ratecarModal-content{
+    margin-top: 90px;
+}
+.ratecarModal-closeBtn{
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+.ratecarModal-content h3{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;   
+}
+.ratecarModal-content p{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; 
+    max-width: 560px;
 }

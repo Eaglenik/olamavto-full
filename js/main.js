@@ -160,13 +160,38 @@ $(document).ready(function(){
             },
         }
     });
-    var owl = $('.autoblog-slider');
-    var container = $('<div class="autoblogSliderNav"></div>');
-    var autoblogSliderNav = $('<div class="container position-relative"></div>');
-    container.append(owl.find('.owl-nav'));
-    container.append(owl.find('.owl-dots'));
-    autoblogSliderNav.append(container);
-    owl.prepend(autoblogSliderNav);
+    $('.avto-description, .autoblog-slider').each(function(index, element) {
+        var slider = $(element);
+        slider.owlCarousel({
+            items: 1,
+            margin: 30,
+            autoPlay: false,
+            nav: true,
+            mouseDrag: false,
+            dots: true,
+            animateOut: 'fadeOut',
+            navText: [
+                '<span class="icon-arrL"></span>',
+                '<span class="icon-arrR"></span>',
+            ],
+            responsive : {
+                0 : {
+                    nav: false,
+                    autoHeight:true,
+                },
+                992 : {
+                    nav: true,
+                    autoHeight:false,
+                },
+            }
+        });
+        var container = $('<div class="autoblogSliderNav"></div>');
+        var autoblogSliderNav = $('<div class="container position-relative"></div>');
+        container.append(slider.find('.owl-nav'));
+        container.append(slider.find('.owl-dots'));
+        autoblogSliderNav.append(container);
+        slider.prepend(autoblogSliderNav);
+    });
 })
 // find count avto
 $(document).ready(function() {
@@ -205,7 +230,6 @@ $(document).ready(function() {
         var isBrand = $(this).data("brand");
         var isModel = $(this).data("model"); 
         var selectElement = isBrand ? $("#brand") : (isModel ? $("#model") : null);
-    
         if (selectElement) {
             selectElement.val(value);
             selectElement.trigger("change");
@@ -229,7 +253,6 @@ $(".custom-select").each(function() {
         template += '<span class="btn-model custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
     });
     template += '</div></div>';
-
     $(this).wrap('<div class="custom-select-wrapper col-4"></div>');
     $(this).hide();
     $(this).after(template);
@@ -269,7 +292,7 @@ $(document).ready(function() {
 });
 // add/remove disabled in selecteds
 $(document).ready(function(){
-    $('.brand').on('click', function() {
+    $('.brand, .model').on('click', function() {
         $('.modelList').removeClass('disabled');
         $('.generationList').removeClass('disabled');
         $('.carcaseList').removeClass('disabled');
@@ -322,4 +345,28 @@ $(document).ready(function(){
         }
         $(this).toggleClass('active');
     });
+})
+// select avto color
+$(document).ready(function() {
+    $(".avto-color a").click(function() {
+      $(".avto-color a").removeClass("is-active");
+      $(".car-color-img").removeClass("is-active");
+      $(".avto-color-name").removeClass("is-active");
+      $(this).addClass("is-active");
+      var index = $(this).index();
+      $(".car-color-img").eq(index).addClass("is-active");
+      $(".avto-color-name").eq(index).addClass("is-active");
+      return false;
+    });
+});
+$(document).ready(function() {
+    $(".avto-text_btn").click(function(e) {
+        e.preventDefault();
+        $(".avto-text p:gt(0)").toggle();
+        $(this).hide()
+        return false;
+    });
+});
+$('.avto-btns a').click(function() {
+    return false
 })

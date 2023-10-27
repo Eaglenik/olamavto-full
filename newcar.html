@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olamauto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <!-- TOP BTN -->
+    <a id="top" class="show icon-chevroneUp"></a>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="/" class="header-logo"><img src="image/logo.png" alt=""></a>
+        <a href="/" class="d-xl-none d-block"><img src="image/mobile-logo.png" alt=""></a>
+        <div class="header-list d-md-flex d-none">
+            <a href="/" style="font-weight: 700;">Trade-in</a>
+            <a href="/">Новые авто</a>
+            <a href="oldcars.html">Авто с пробегом</a>
+            <a href="/" class="d-xl-inline-block d-none">Автокредит</a>
+            <a href="/" class="d-xl-inline-block d-none">Автоблог</a>
+            <a href="/" class="d-xxl-inline-block d-none">Контакты</a>
+            <div class="dropdown d-xl-block d-none">
+              <a class="icon-chevroneDown" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"></a>
+              <ul class="dropdown-menu">
+                <li class="d-xxl-none d-inline-block"><a href="/">Контакты</a></li>
+                <li><a href="/">О нас</a></li>
+              </ul>
+            </div>
+        </div>
+        <button class="rateCarBtn d-lg-block d-none" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+        <div class="d-flex gap-4">
+            <div class="header-contacts">
+                <a href="mailto:">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" fill="#282828" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" fill="#282828"/>
+                        <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="https://t.me/olamavto_uz">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0627 20C17.7344 20 17.3939 19.8946 17.147 19.7163L12.8279 16.6709C12.7797 16.6366 12.7095 16.5729 12.6488 16.5574L12.2756 16.8837C12.1513 17.0019 12.0417 17.1059 11.9176 17.2245C11.85 17.2891 11.7978 17.3179 11.7281 17.3849L10.8225 18.2267C10.479 18.5532 10.0184 18.9975 9.48399 18.9975L9.82782 14.8225C9.89885 14.318 9.84093 14.5684 10.2154 14.2072L18.3762 7.11415C18.4882 7.00809 18.5378 6.96786 18.5006 6.81624C18.1712 6.66602 17.9265 6.87944 17.7083 7.0091L7.27462 13.2473L2.46491 11.8598C2.28836 11.8026 2 11.6582 2 11.4504C2 11.1812 2.1264 11.0177 2.34702 10.8723C2.68876 10.647 3.71474 10.3024 4.11217 10.1664L20.4542 4.17096C20.9228 4.00644 21.4069 3.84105 21.7768 4.28928C22.1738 4.77051 21.9461 5.46258 21.8168 5.99546L19.0098 18.5545C18.9043 19.0614 18.7701 20 18.0627 20L18.0627 20Z" fill="#282828"/>
+                    </svg>
+                </a>
+                <div class="dropdown">
+                    <a class="phoneDropdown" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/">Заказать звонок</a></li>
+                      <li><a href="1312">Позвонить</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <a href="/" class="langBtn d-xl-flex d-none">Ру</a>
+            <button class="burger" data-bs-toggle="offcanvas" data-bs-target="#burgerMenu" aria-controls="offcanvasRight">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="burgerMenu" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header justify-content-end gap-3">
+                <a href="/" class="langBtn">Ру</a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="header-list d-flex flex-column align-items-start">
+                    <a href="/" style="font-weight: 700;">Trade-in</a>
+                    <a href="/">Новые авто</a>
+                    <a href="/">Авто с пробегом</a>
+                    <a href="/">Автокредит</a>
+                    <a href="/">Автоблог</a>
+                    <a href="/">Контакты</a>
+                    <a href="/">О нас</a>
+                </div>
+            </div>
+            <div class="offcanvas-footer">
+                <div>
+                    <a href="/">г. Ташкент, Яшнабадский район, ул. Элбека, 61/3</a>
+                    <div class="header-contacts gap-4 mt-4">
+                        <a href="mailto:">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" fill="#282828" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" fill="#282828"/>
+                                <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/olamavto_uz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0627 20C17.7344 20 17.3939 19.8946 17.147 19.7163L12.8279 16.6709C12.7797 16.6366 12.7095 16.5729 12.6488 16.5574L12.2756 16.8837C12.1513 17.0019 12.0417 17.1059 11.9176 17.2245C11.85 17.2891 11.7978 17.3179 11.7281 17.3849L10.8225 18.2267C10.479 18.5532 10.0184 18.9975 9.48399 18.9975L9.82782 14.8225C9.89885 14.318 9.84093 14.5684 10.2154 14.2072L18.3762 7.11415C18.4882 7.00809 18.5378 6.96786 18.5006 6.81624C18.1712 6.66602 17.9265 6.87944 17.7083 7.0091L7.27462 13.2473L2.46491 11.8598C2.28836 11.8026 2 11.6582 2 11.4504C2 11.1812 2.1264 11.0177 2.34702 10.8723C2.68876 10.647 3.71474 10.3024 4.11217 10.1664L20.4542 4.17096C20.9228 4.00644 21.4069 3.84105 21.7768 4.28928C22.1738 4.77051 21.9461 5.46258 21.8168 5.99546L19.0098 18.5545C18.9043 19.0614 18.7701 20 18.0627 20L18.0627 20Z" fill="#282828"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown">
+                            <a class="phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/">Заказать звонок</a></li>
+                              <li><a href="tel:1312">Позвонить</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+                <button class="burger-menu_btn">Оценить авто</button>
+            </div>
+          </div>
+    </header>
+    <div class="header-line"></div>
+    <div class="modal fade" id="ratecarModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered ratecarModal">
+          <div class="modal-content">
+            <div class="container ratecarModal-content">
+                <div class="d-flex justify-content-between">
+                    <h3>Отпустите старое — получите новое!</h3>
+                    <button class="ratecarModal-closeBtn" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        <img src="image/icons/rate-x.png" alt="">
+                    </button>
+                </div>
+                <div class="">
+                    <p>Узнайте предварительную стоимость своего автомобиля и заплатите меньше за новый!</p>
+                    <div class="">
+                        <div class="ratecarModal-imgs">
+                            <img src="" alt="">
+                        </div>
+                        <form action="" class=""></form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- HEADER END -->
+    <!-- BREADCRUMB -->
+    <section class="container d-md-block d-none" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Главная</a></li>
+          <li class="breadcrumb-item"><a href="/">Новые автомобили</a></li>
+          <li class="breadcrumb-item"><a href="/">Chevrolet</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Onix</li>
+      </ol>
+    </section>
+    <!-- BREADCRUMB END -->
+    <!-- NEW AVTO -->
+    <section class="container">
+      <h2 class="title">Chevrolet Onix</h2>
+      <div class="newavto">
+          <div class="newavto-slider_item">
+            <div>
+              <div class="newavto-slider_item--img">
+                <img class="car-color-img is-active" src="image/avto/onix.png" alt="">
+                <img class="car-color-img" src="image/avto/onixred.png" alt="">
+                <img class="car-color-img" src="image/avto/onix.png" alt="">
+                <img class="car-color-img" src="image/avto/onixred.png" alt="">
+                <img class="car-color-img" src="image/avto/onix.png" alt="">
+                <img class="car-color-img" src="image/avto/onixred.png" alt="">
+              </div>
+              <div class="avto-color">
+                <a class="is-active" href="#" style="background: #E7E7E7;"></a>
+                <a href="#" style="background: #767A7C;"></a>
+                <a href="#" style="background: #000000;"></a>
+                <a href="#" style="background: #67727F;"></a>
+                <a href="#" style="background: #045F89;"></a>
+                <a href="#" style="background: #FF0000;"></a>
+                <p class="avto-color-name is-active">Summit White</p>
+                <p class="avto-color-name">Switchblade Silver</p>
+                <p class="avto-color-name">Black Meet Kettle MET-3</p>
+                <p class="avto-color-name">Satin Steel Grey Metallic</p>
+                <p class="avto-color-name">Seeker MET-3</p>
+                <p class="avto-color-name">Red-E or Not Red MET-3
+                </p>
+              </div>
+            </div>
+              <span>от 150 000 000 сум</span>
+              <div class="newavto-slider_item--text">
+                  <div>
+                      <h6>В ритме города</h6>
+                      <p>Популярный компактный автомобиль, обладающий современным дизайном и привлекательной ценой<br><br>
+                          Доступен в нескольких вариантах комплектации и оснащён различными опциями для удовлетворения потребностей покупателей</p>
+                  </div>
+                  <div class="newavto-slider_item--btns">
+                      <a href="/">Подробнее о модели</a>
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#tradeinModal">Обменять по Trade-in</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Модальное окно -->
+      <div class="modal fade" id="tradeinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content tradeinModal">
+                <div class="modal-header justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Для участия в программе Trade-In  узнайте предварительную стоимость своего автомобиля. Вы можете оценить его на сайте прямо сейчас.</p>
+                    <button class="tradeinModal-btn" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- NEW AVTO END -->
+    <!-- AVTO OPTIONS -->
+    <section class="position-relative">
+      <div class="container d-flex align-items-lg-center align-items-start justify-content-between flex-lg-row flex-column">
+        <div class="avto-equipment">
+          <div class="avto-equipment_item">
+            <h6>1.2 / 1.2 Turbo</h6>
+            <p>двигатель</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>90/132 л.с</h6>
+            <p>Максимальная мощность</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>5МТ/6АТ</h6>
+            <p>Коробка передач</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>4,8/4.7 л</h6>
+            <p>Расход топлива</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>469 л</h6>
+            <p>Объем багажного отделения</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>10.6 секунд</h6>
+            <p>Разгон до 100 км/ч</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>170 км/ч</h6>
+            <p>Максимальная скорость</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>4474х1730х1471 мм</h6>
+            <p>Габариты</p>
+          </div>
+          <div class="avto-equipment_item">
+            <h6>1120 кг</h6>
+            <p>Вес</p>
+          </div>
+        </div>
+        <div class="avto-options">
+            <h6>В базовую комплектацию входит</h6>
+            <ul class="avto-options_list">
+              <li><img src="image/icons/plus.svg" alt=""> Рулевая колонка с регулировкой по высоте и вылету</li>
+              <li><img src="image/icons/plus.svg" alt=""> Кондиционер</li>
+              <li><img src="image/icons/plus.svg" alt=""> Мультимедиа система с Apple Carplay, Android Auto, Bluetooth на руле</li>
+              <li><img src="image/icons/plus.svg" alt=""> Датчик давления в шинах</li>
+              <li><img src="image/icons/plus.svg" alt=""> Электростеклоподъемники на всех дверях</li>
+              <li><img src="image/icons/plus.svg" alt=""> Подушки безопасности водителя и переднего пассажира</li>
+              <li><img src="image/icons/plus.svg" alt=""> Система курсовой устойчивости ESC</li>
+              <li><img src="image/icons/plus.svg" alt=""> Крепления для детских кресел ISOFIX</li>
+              <li><img src="image/icons/plus.svg" alt=""> Зеркала заднего вида с электроприводом (без подогрева)</li>
+              <li><img src="image/icons/plus.svg" alt=""> Ручки дверей в цвет кузова</li>
+              <li><img src="image/icons/plus.svg" alt=""> Докатка</li>
+              <li><img src="image/icons/plus.svg" alt=""> Ограничитель скорости</li>
+              <li><img src="image/icons/plus.svg" alt=""> Передние дисковые и задние барабанные тормоза с ABS</li>
+              <li><img src="image/icons/plus.svg" alt=""> Pадние парктроники (сенсор парковки)</li>
+              <li><img src="image/icons/plus.svg" alt=""> Ручная регулировка сиденья водителя по 6-ти направлениям</li>
+            </ul>
+            <a href="#" class="download-price">Скачать прайс</a>
+        </div>
+      </div>
+      <div class="avto-options_back"></div>
+    </section>
+    <!-- AVTO OPTIONS END -->
+    <!-- AVTO DESCRIPTIONS -->
+    <section class="avto-descriptions">
+        <div class="avto-description owl-carousel">
+            <div class="avto-description_item">
+                <div class="container">
+                    <div class="avto-description_text">
+                        <h6>Onix — это доступный переднеприводный бюджетный компактный седан C-класса </h6>
+                        <p>Автомобиль сочетает в себе стильный дизайн, современный интерьер и хорошие технические характеристики, все это по относительно невысокой цене.</p>
+                        <p>Chevrolet создал этот автомобиль без строгих ограничений на целевую аудиторию, включая молодёжь, семейные пары (с детьми) и даже пожилых людей.</p>
+                    </div>
+                </div>
+                <div class="avto-description_img">
+                    <img src="image/avto-decr/avto-decr (1).png" alt="">
+                </div>
+            </div>
+            <div class="avto-description_item">
+                <div class="container">
+                    <div class="avto-description_text">
+                        <h6>Onix — это доступный переднеприводный бюджетный компактный седан C-класса </h6>
+                        <p>На автомобиле установлиен 3-цилиндровый бензиновый двигатель рабочим объемом 1.2 литра с распределенным впрыском, 12-клапанным ГРМ и изменяемыми фазами газораспределения, доступный в двух исполнениях.</p>
+                    </div>
+                </div>
+                <div class="avto-description_img">
+                    <img src="image/avto-decr/avto-decr (6).png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="avto-description left owl-carousel">
+            <div class="avto-description_item">
+                <div class="container d-flex justify-content-end">
+                    <div class="avto-description_text">
+                        <h6>Экстерьер</h6>
+                        <p>Chevrolet Onix впечатляет на дороге своим ярким внешним видом.</p>
+                        <p>Плавные горизонтальные линии на кузове подчёркивают стильный современный дизайн автомобиля, а футуристичная светотехника модели привлекает взгляды окружающих и впечатляет автолюбителей.</p>
+                    </div>
+                </div>
+                <div class="avto-description_img">
+                    <img src="image/avto-decr/avto-decr (4).png" alt="">
+                </div>
+            </div>
+            <div class="avto-description_item">
+                <div class="container d-flex justify-content-end">
+                    <div class="avto-description_text">
+                        <h6>Экстерьер</h6>
+                        <p>Для освещения дорог  используются светодиодные дневные ходовые огни, прожекторы и светодиодные задние фонари.</p>
+                        <p>Также для безопасности установлена автоматическая функция освещения фар с использованием датчиков сумерек.</p>
+                    </div>
+                </div>
+                <div class="avto-description_img">
+                    <img src="image/avto-decr/avto-decr (5).png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="avto-description owl-carousel">
+            <div class="avto-description_item">
+                <div class="container">
+                    <div class="avto-description_text">
+                        <h6>Интерьер</h6>
+                        <p>Внутреннее пространство в автомобиле Onix выглядит элегантно, современно, надёжно и встречает своих обитателей продуманной эргономикой.</p>
+                        <p>В нем присутствует трехспицевый мультируль, понятная комбинация приборов с аналоговыми шкалами и цифровым дисплеем бортового компьютера между ними.</p>
+                        <p>Центральная консоль оборудована 8-дюймовым экраном мультимедийной системы, симметричными дефлекторами вентиляции и компактным блоком климатической установки.</p>
+                    </div>
+                </div>
+                <div class="avto-description_img">
+                    <img src="image/avto-decr/avto-decr (2).png" alt="">
+                </div>
+            </div>
+            <div class="avto-description_item">
+                <div class="container">
+                    <div class="avto-description_text">
+                        <h6>Интерьер</h6>
+                        <p>Багажник имеет сложную форму, но может вместить 469 литров груза.</p>
+                        <p>Второй ряд сидений складывается на две неравные части, что позволяет перевозить длинные предметы через задний проем в салон.</p>
+                    </div>
+                </div>
+                <div class="avto-description_img">
+                    <img src="image/avto-decr/avto-decr (3).png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- AVTO DESCRIPTIONS END -->
+    <!-- AVTO BTNS -->
+    <section class="container d-flex align-items-center justify-content-between mt-5 flex-lg-row flex-column gap-3">
+        <a href="#" class="download-price mt-0 mb-0 align-self-lg-center align-self-md-start align-self-center">Скачать прайс</a>
+        <div class="avto-btns d-flex gap-3 flex-sm-row flex-column">
+            <button>Оставить заявку</button>
+            <a href="#" data-bs-target="#tradeinModal" data-bs-toggle="modal">Обменять по Trade-in</a>
+        </div>
+        <span></span>
+    </section>
+    <!-- AVTO BTNS END -->
+    <!-- AVTO TEXT -->
+    <section class="avto-text">
+      <p>Измерения времени разгона проведены в стандартных условиях с использованием специализированного оборудования и эталонного топлива. Фактическое время разгона может изменяться из-за различных объективных и субъективных факторов, таких как влажность, давление и температура окружающей среды, состав используемого топлива, рельеф местности, характеристики дорожного покрытия, направление и скорость ветра, атмосферные осадки, давление в шинах, их размеры, марка и модель, масса перевозимого груза (включая водителя и пассажиров) и навыки водителя.</p>
+      <p>Из-за различий в комплектациях автомобилей nехнические характеристики могут отличаться от от указанных выше. Представленные данные о комплектации, технических характеристиках, цветовых сочетаниях, стоимости автомобилей и сервисном обслуживании являются информационными и не являются публичной офертой. Компания Chevrolet оставляет за собой право на внесение изменений в конструкцию и комплектацию автомобилей без предварительного уведомления.</p>
+      <p>Сайт содержит наиболее полную и актуальную информацию на момент размещения.</p>
+      <p>Проверить актуальную информацию о спецификации, опциях и возможности доукомплектации вы можете обратившись в офис компании Olamavto.</p>
+      <p>Для подробной информации о стоимости, спецификации, технических характеристиках и наличии автомобилей оставьте заявку на сайте или закажите обратный звонок. Наш менеджер свяжется с вами в течение одного рабочего дня и ответит на все ваши вопросы, а также поможет определится с выбором автомобиля, согласно вашим пожеланиям</p>
+      <a href="#" class="avto-text_btn">Развернуть описание</a>
+    </section>
+    <!-- AVTO TEXT END -->
+    <!-- OLAM INFO -->
+    <section class="container">
+      <div class="olam-info_slider owl-carousel">
+          <div class="olam-info_slider--card">
+              <span>Автокредит</span>
+              <div class="olam-info_slider--card_content">
+                  <img src="image/red-circle (2).png" alt="">
+                  <img src="image/grey-circles.png" alt="">
+                  <img src="image/image (1).png" alt="">
+                  <div class="olam-info_slider--card_text">
+                      <h6>Начните свой путь к новому автомобилю уже сегодня!</h6>
+                      <ul>
+                          <li>Гибкие условия</li>
+                          <li>Минимальный первоначальный взнос</li>
+                          <li>Конкурентные процентные ставки</li>
+                          <li>Удобные ежемесячные платежи</li>
+                      </ul>
+                      <a href="/">Получить автокредит</a>
+                  </div>
+              </div>
+          </div>
+          <div class="olam-info_slider--card two-card">
+              <span>Онлайн-оценка</span>
+              <div class="olam-info_slider--card_content">
+                  <img class="olam-info_img1" src="image/red-circle (1).png" alt="">
+                  <img src="image/grey-circles.png" alt="">
+                  <img src="image/image (2).png" alt="">
+                  <div class="olam-info_slider--card_text">
+                      <h6>Оцените свой автомобиль онлайн, не выходя из дома</h6>
+                      <p>Узнайте предварительную стоимость вашего автомобиля на сайте прямо сейчас и заплатите меньше за новую!</p>
+                      <a href="/">Оценить автомобиль</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>  
+    <!-- OLAM INFO END -->
+    <!-- QUESTIONS -->
+    <section class="questions">
+        <div>
+            <img class="questions-img_circle" src="image/form-circle.svg" alt="">
+            <img class="questions-img_car" src="image/form-img.png" alt="">
+        </div>
+        <form action="url" class="questions-form container">
+            <div class="questions-form_text">
+                <h6>Остались вопросы</h6>
+                <p>Закажите обратный звонок и менеджер свяжется с вами в течение рабочего дня</p>
+            </div>
+            <div class="questions-form_inpts">
+                <input type="text" placeholder="Имя" required>
+                <input type="text" placeholder="+998 Телефон" data-phone-pattern="" required>
+            </div>
+            <div class="questions-form_func">
+                <div class="questions-form_checkbox">
+                    <input type="checkbox" id="questionsFormCheckbox">
+                    <label for="questionsFormCheckbox">Я согласен(а) на обработку персональных данных</label>
+                </div>
+                <div class="d-flex justify-content-between align-items-center gap-xl-0 gap-5 flex-wrap">
+                    <span class="captcha">Капча</span>
+                    <button type="submit" id="questionsFormSubmitBtn">Заказать звонок</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- QUESTIONS END -->
+    <!-- SEO TEXT -->
+    <section class="seo-text">
+      <div class="container">
+          <div class="seo-text_content before">
+              <h4>Какой‑то SEO текст о продаже новых и подержанных авто</h4>
+              <p>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А так же это онлайн-площадка по продаже автомобилей с пробегом.</p>
+              <p>Официальный дилер Chevrolet в Узбекистане, Olamavto, представляет комплексные услуги по продаже автомобилей, запчастей и сервисному обслуживанию, соответствующие мировым стандартам 3S. Клиенты могут приобрести автомобили напрямую, воспользоваться программой Trade-In или приобрести проверенные автомобили с гарантией.</p>
+              <p>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А так же это онлайн-площадка по продаже автомобилей с пробегом.</p>
+              <p>Официальный дилер Chevrolet в Узбекистане, Olamavto, представляет комплексные услуги по продаже автомобилей, запчастей и сервисному обслуживанию, соответствующие мировым стандартам 3S. Клиенты могут приобрести автомобили напрямую, воспользоваться программой Trade-In или приобрести проверенные автомобили с гарантией.</p>
+          </div>
+          <button type="button" class="seo-text_moreBtn">Развернуть описание</button>
+      </div>
+    </section>
+    <!-- SEO TEXT END -->
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container d-flex justify-content-between flex-xxl-row flex-column gap-xl-5 gap-4">
+          <div class="footer-left">
+                  <a href="/" class="footer-adres">г. Ташкент, Яшнабадский район, ул. Элбека, 61/3</a>
+                  <div class="footer-contacts gap-4 mt-xxl-4 mt-0 d-flex align-items-center">
+                      <div class="dropdown">
+                          <a class="footer-phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="/">Заказать звонок</a></li>
+                            <li><a href="tel:1312">Позвонить</a></li>
+                          </ul>
+                      </div>
+                      <a href="https://t.me/olamavto_uz">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0627 20C17.7344 20 17.3939 19.8946 17.147 19.7163L12.8279 16.6709C12.7797 16.6366 12.7095 16.5729 12.6488 16.5574L12.2756 16.8837C12.1513 17.0019 12.0417 17.1059 11.9176 17.2245C11.85 17.2891 11.7978 17.3179 11.7281 17.3849L10.8225 18.2267C10.479 18.5532 10.0184 18.9975 9.48399 18.9975L9.82782 14.8225C9.89885 14.318 9.84093 14.5684 10.2154 14.2072L18.3762 7.11415C18.4882 7.00809 18.5378 6.96786 18.5006 6.81624C18.1712 6.66602 17.9265 6.87944 17.7083 7.0091L7.27462 13.2473L2.46491 11.8598C2.28836 11.8026 2 11.6582 2 11.4504C2 11.1812 2.1264 11.0177 2.34702 10.8723C2.68876 10.647 3.71474 10.3024 4.11217 10.1664L20.4542 4.17096C20.9228 4.00644 21.4069 3.84105 21.7768 4.28928C22.1738 4.77051 21.9461 5.46258 21.8168 5.99546L19.0098 18.5545C18.9043 19.0614 18.7701 20 18.0627 20L18.0627 20Z" fill="#282828"/>
+                          </svg>
+                      </a>
+                      <a href="mailto:">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" fill="#282828" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" fill="#282828"/>
+                              <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </a>
+                  </div>
+              <div class="footer-text d-xxl-block d-none">
+                  <p>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А также онлайн-площадка по продаже автомобилей с пробегом.</p>
+                  <p>Дизайн и разработка сайта — OOO «Optimize»</p>
+                  <p>© 2023 Olamavto &nbsp;&nbsp;&nbsp; Все права защищены</p>
+              </div>
+          </div>
+          <div class="footer-right">
+
+              <ul class="footer-main_links">
+                  <li><a href="/"><strong style="font-weight: 800;">Trade-in</strong></a></li>
+                  <li><a href="/"><strong>Новые авто</strong></a></li>
+                  <li><a href="/"><strong>Авто с пробегом</strong></a></li>
+                  <li><a href="/"><strong>Автоблог</strong></a></li>
+                  <li class="d-md-none d-block"><a href="/"><strong>О компании</strong></a></li>
+                  <li class="d-md-none d-block"><a href="/"><strong>Контакты</strong></a></li>
+                  <button class="rateCarBtn d-lg-block d-none" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+              </ul>
+              <div class="d-md-flex d-none flex-lg-column flex-row gap-4 footer-credits">
+                  <ul>
+                      <li><a href="/"><strong>Автокредит</strong></a></li>
+                      <li><a href="/">Кредит от Kapital Bank</a></li>
+                      <li><a href="/">Кредит от Anor Bank</a></li>
+                      <li><a href="/">Кредит от Asaka Bank</a></li>
+                  </ul>
+                  <ul class="mt-lg-4 mt-0">
+                      <li><a href="/"><strong>О компании</strong></a></li>
+                      <li><a href="/"><strong>Контакты</strong></a></li>
+                      <button class="rateCarBtn d-lg-none d-block" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+                  </ul>
+              </div>
+              <div class="custom-accordion d-md-none d-flex w-100">
+                  <div class="custom-accordion-item">
+                    <div class="custom-accordion-header">
+                          <h5><strong>Автокредит</strong></h5>
+                          <div class="custom-accordion-arrow">
+                            <img src="image/icons/chevrone-accordion.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-accordion-content">
+                      <ul class="custom-accordion-list footer-avto_list">
+                          <li><a href="/">Кредит от Kapital Bank</a></li>
+                          <li><a href="/">Кредит от Anor Bank</a></li>
+                          <li><a href="/">Кредит от Asaka Bank</a></li>
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+              <button class="rateCarBtn d-md-none d-block w-100 mt-1 mb-2" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+              <ul class="footer-avto_list d-md-flex d-none">
+                  <li><a href="allcars.html"><strong>Каталог автомобилей</strong></a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Nexia</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Nexia</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+                  <li><a href="/">Chevrolet Captiva</a></li>
+              </ul>
+              <div class="custom-accordion d-md-none d-flex w-100">
+                  <div class="custom-accordion-item">
+                    <div class="custom-accordion-header">
+                          <h5><strong>Каталог автомобилей</strong></h5>
+                          <div class="custom-accordion-arrow">
+                            <img src="image/icons/chevrone-accordion.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-accordion-content">
+                      <ul class="custom-accordion-list footer-avto_list">
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Nexia</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Nexia</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                          <li><a href="/">Chevrolet Captiva</a></li>
+                        </ul>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-text d-xxl-none d-block">
+              <p>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А также онлайн-площадка по продаже автомобилей с пробегом.</p>
+              <p>Дизайн и разработка сайта — OOO «Optimize»</p>
+              <p>© 2023 Olamavto &nbsp;&nbsp;&nbsp; Все права защищены</p>
+          </div>
+      </div>
+      <div class="container ">
+          <div class="user-agree">
+              <p>Предложение не является публичной офертой. Сведения о ценах на продукцию бренда Chevrolet, содержащиеся на сайте, носят исключительно информационный характер. Указанные цены могут отличаться от действительных цен в зависимости от комплектации. Для получения подробной информации об актуальных ценах на продукцию Chevrolet обращайтесь в офис компании Olamavto. Представленное изображение автомобиля может отличаться от реализуемого.</p>
+              <p>Приобретение любой продукции бренда Chevrolet осуществляется в соответствии с условиями индивидуального договора купли-продажи.</p>
+          </div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
