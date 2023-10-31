@@ -318,13 +318,7 @@ button{
     align-items: center;
     gap: 30px;
 }
-.header a{
-    color: var(--black);
-    font-family: RF Dewi Extended;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 150%;
-}
+
 .icon-chevroneDown::before{
     transform: rotate(0deg);
     transition: 0.3s all ease-out;
@@ -353,12 +347,20 @@ button{
     font-family: RF Dewi Extended;
     font-style: normal;
     color: var(--black);
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 140%
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 140% !important
+}
+.header a,
+.dropdown-menu a{
+    color: var(--black);
+    font-family: RF Dewi Extended;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 150%;
 }
 .dropdown-menu{
-    min-width: 11rem;
+    min-width: 12rem;
 }
 .footer a:hover svg path,
 .header a:hover svg path{
@@ -2025,7 +2027,8 @@ button{
     color: var(--grey1);
     border:1px solid var(--grey1);
 }
-.avto-btns button{
+.avto-btns button,
+#callbackFormSubmitBtn{
     color: var(--white1);
     border:1px solid var(--red3);
     outline: none;
@@ -2089,7 +2092,7 @@ button{
 .ratecarModal .modal-content{
     border-radius: 0;
     /* border: none; */
-    height: 100vh;
+    height: 100%;
 }
 .ratecarModal-content{
     margin-top: 90px;
@@ -2100,15 +2103,6 @@ button{
     border: none;
     outline: none;
 }
-.ratecarModal-content h3{
-    color: var(--txt-black, #262627);
-    font-family: RF Dewi Extended;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    text-transform: uppercase;   
-}
 .ratecarModal-content p{
     color: var(--txt-black, #262627);
     font-family: RF Dewi Extended;
@@ -2117,4 +2111,259 @@ button{
     font-weight: 700;
     line-height: 140%; 
     max-width: 560px;
+}
+/* contacts */
+.contacts{
+    position: relative;
+    margin: 130px 0 150px 0;
+}
+.contacts-map{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 67%;
+    margin-top: 20px;
+    height: 100%;
+}
+.contacts-map iframe{
+    width: 100%;
+    height: 100%;
+}
+.contacts-main{
+    position: relative;
+    z-index: 2;
+    max-width: 583px;
+}
+.contacts-info{
+    padding: 20px 40px 30px 40px;
+    border-radius: 40px;
+    border-right: 2px solid var(--black);
+    border-left: 2px solid var(--black);
+    background: var(--white2);
+    margin-bottom: 30px;
+}
+.contacts-adres{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.contacts-info svg{
+    width: 50px;
+    height: 50px;
+}
+.contacts-phone{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.contacts-form{
+    max-width: 338px;
+}
+.callback-form_content input[type="text"],
+.contacts-form input[type="text"]{
+    padding: 30px 10px 10px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--grey2);
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    outline: none;
+}
+.callback-form_content input[type="text"]::placeholder,
+.contacts-form input[type="text"]::placeholder{
+    color: var(--grey1);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+.callback-form_checkbox,
+.contacts-form_checkbox{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+}
+.callback-form_checkbox input,
+.contacts-form_checkbox input{
+    cursor: pointer;
+    margin-top: 5px;
+    appearance: none;
+    min-width: 24px;
+    height: 24px;
+    background: url(/image/icons/contactsWhite.png);
+    outline: none;
+}
+.callback-form_checkbox input:checked,
+.contacts-form_checkbox input:checked{
+    background: url(/image/icons/contactsRed.png);
+}
+.callback-form_checkbox label,
+.contacts-form_checkbox label{
+    cursor: pointer;
+    color: var(--txt-black, #262627);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+#contacts-form_btn{
+    background: var(--red3);
+    color: var(--white1);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    line-height: 150%;
+}
+/* credit */
+.credit,
+.about-us{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 150px;
+}
+.credit-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 338px;
+}
+.credit h6,
+.about-us_info h5{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+.credit p{
+    color: var(--black);
+    font-size: 18px;
+    font-style: normal;
+    line-height: 150%;
+}
+.credit-options{
+    padding: 40px 30px;
+    background: var(--white2);
+}
+.credit-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.credit-list li{
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    color: var(--txt-black, #262627);
+    font-size: 18px;
+    line-height: 150%;
+}
+.credit-left a{
+    color: var(--green2);
+    font-weight: 500;
+}
+.credit-btns a,
+.credit-btns button{
+    background: var(--red3);
+    border-radius: 100px;
+    padding: 11px 30px 17px 30px;
+    color: var(--white1);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    max-width: 290px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.credit-btns{
+    margin-bottom: 30px;
+}
+.credit-btns button{
+    color: var(--grey1);
+    border: 1px solid var(--grey1);
+    background: var(--white1);
+    margin-top: 30px;
+}
+.about-us_info .about-company_number{
+    width: 100%;
+}
+.about-us_info{
+    max-width: 337px;
+}
+.about-us img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.about-us_text p{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 15px;
+}
+/* callback */
+.callback-form{
+    border-radius: 50%;
+    width: 583px;
+    height: 583px;
+    border: 1px solid var(--grey3);
+    max-height: 583px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+}
+.callback-form_content{
+    display: flex;
+    flex-direction: column;
+    max-width: 337px;
+}
+.callback{
+    margin-bottom: 150px;
+}
+.callback h6{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 704px;
+}
+.callback-form_content input[type="text"]{
+    font-size: 18px;
+}
+.callback-form_checkbox{
+    margin: 20px 0;
+}
+.callback img{
+    margin-top: 50px;
+    max-width: 704px;
+    width: 100%;
 }

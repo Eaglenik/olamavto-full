@@ -97,7 +97,11 @@
     .autoblog-slider_text a,
     .avtobanner-text_r h6,
     .avto-options h6,
-    .avto-description_text h6{
+    .avto-description_text h6,
+    .contacts-adres,
+    .credit h6,
+    .about-us_info h5,
+    .callback h6{
         font-size: 22px;
     }
     .olam-info_slider--card img:nth-of-type(1){
@@ -131,7 +135,8 @@
     .about-company_number p,
     .autoblog-slider_text p,
     .autoblog-slider_text a,
-    .avto-equipment_item p{
+    .avto-equipment_item p,
+    .about-us_text p{
         font-size: 18px;
     }
     .about-company_numbers{
@@ -267,10 +272,12 @@
     .avto-description_item{
         height: 600px;
     }
-    .avto-description_text{
+    .avto-description_text,
+    .about-us_info{
         max-width: 270px;
     }
-    .avto-description_img{
+    .avto-description_img,
+    .contacts-map{
         width: 75%;
     }
     .avto-description .autoblogSliderNav{
@@ -279,6 +286,28 @@
     .avto-descriptions{
         margin-top: 100px;
     }
+    .contacts-form{
+        max-width: 250px;
+    }
+    .contacts{
+        margin: 80px 0 100px 0;
+    }
+    .contacts-main{
+        max-width: 465px;
+    }
+    .credit-left{
+        max-width: 270px;
+    }
+    .about-us_info h5{
+        line-height: 140%;
+    }
+    .callback img{
+        max-width: 560px;
+    }
+    .callback{
+        margin-bottom: 100px;
+    }
+    
 }
 @media (max-width:1200px){
     .header-logo{
@@ -313,7 +342,10 @@
         height: 50px;
     }
     .about_trade-in__point p, .newavto-slider_item--text p,
-    .newavto-slider_item--btns a{
+    .newavto-slider_item--btns a,
+    .credit p,
+    .credit-list li,
+    .about-us_text p{
         font-size: 17px;
     }
     .about_trade-in__avto a{
@@ -471,6 +503,43 @@
     }
     .avto-description .autoblogSliderNav{
         max-width: 65%;
+    }
+    .contacts-main{
+        max-width: 460px;
+    }
+    .contacts-form{
+        max-width: 300px;
+    }
+    .contacts-map{
+        width: 64%;
+    }
+    .contacts-adres,
+    .credit h6{
+        margin-bottom: 20px;
+    }
+    .contacts-info{
+        margin-bottom: 10px;
+    }
+    .contacts-form{
+        gap: 30px;
+    }
+    .credit-options{
+        padding: 30px;
+    }
+    .credit,
+    .about-us{
+        margin-bottom: 100px;
+    }
+    .callback-form{
+        width: unset;
+        height: unset;
+        border: unset;
+    }
+    .ratecarModal-closeBtn{
+        width: 50px;
+    }
+    .ratecarModal-content{
+        margin-top: 20px;
     }
 }
 @media (max-width:992px){
@@ -841,6 +910,75 @@
     .tradeinModal{
         margin: 0 20px;
     }
+    .contacts{
+        margin: 70px 0;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .contacts-map{
+        position: relative;
+        width: 100%;
+        padding-left: 40px;
+        height: 500px;
+    }
+    .contacts-info{
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: 2;
+        max-width: 480px;
+    }
+    .contacts-main{
+        position: unset;
+    }
+    .contacts-form input[type="text"]{
+        width: 48%;
+    }
+    .contacts-form,
+    .contacts-main{
+        max-width: unset;
+    }
+    .contacts-form_checkbox{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .contacts-form_checkbox input{
+        margin-top: unset;
+    }
+    .credit{
+        flex-direction: column;
+        margin-bottom: 70px;
+    }
+    .credit-left{
+        max-width: 480px;
+    }
+    .about-us{
+        flex-direction: column;
+    }
+    .about-us_info{
+        max-width: unset;
+    }
+    .about-us_info .about-company_number{
+        width: 48%;
+    }
+    .about-us img{
+        position: absolute;
+        left: 0;
+        width: 96%;
+        height: 500px;
+        object-fit: cover;
+    }
+    .about-us_img{
+        height: 500px;
+    }
+    .callback img,
+    .callback h6{
+        max-width: 400px;
+    }
+    .callback img{
+        margin-top: 20px;
+    }
 }
 @media (max-width:768px){
     .header-contacts{
@@ -1059,7 +1197,8 @@
     .avtobanner img:nth-of-type(3){
         width: 63%;
     }
-    .rate-img3{
+    .rate-img3,
+    .callback img{
         display: none;
     }
     .rate-img2{
@@ -1084,6 +1223,37 @@
     .avto-descriptions{
         gap: 20px;
         margin-top: 70px;
+    }
+    .contacts-map{
+        padding-left: unset;
+    }
+    .contacts-form input[type="text"],
+    .about-us img{
+        width: 100%;
+    }
+    .contacts{
+        margin: 40px 0;
+    }
+    .credit-options{
+        padding: 30px 20px;
+    }
+    .credit-list li{
+        gap: 10px;
+    }
+    .about-us img,
+    .about-us_img{
+        height: 450px;
+    }
+    .callback-form{
+        top: 0;
+        margin-top: 30px;
+    }
+    .ratecarModal-closeBtn img{
+        display: block !important;
+    }
+    .callback h6{
+        text-align: center;
+        max-width: unset;
     }
 }
 @media (max-width:576px){
@@ -1304,6 +1474,23 @@
         flex-direction: column;
         align-items: center;
     }
+    .contacts-info{
+        right: 20px;
+        max-width: unset;
+    }
+    .contacts-info{
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .about-us img, .about-us_img{
+        height: 332px;
+    }
+    .about-us_info .about-company_number{
+        width: 100%;
+    }
+    .about-us{
+        margin-bottom: 70px;
+    }
 }
 @media (max-width:400px){
     .newavto-slider .owl-dots{
@@ -1317,7 +1504,11 @@
         text-align: center;
     }
     .avto-btns,
-    .tradeinModal .tradeinModal-btn{
+    .tradeinModal .tradeinModal-btn,
+    #contacts-form_btn{
         width: 100%;
+    }
+    .credit-btns a, .credit-btns button{
+        max-width: unset;
     }
 }

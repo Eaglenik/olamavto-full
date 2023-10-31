@@ -370,3 +370,4 @@ $(document).ready(function() {
 $('.avto-btns a').click(function() {
     return false
 })
+// rate car form

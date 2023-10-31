@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olamauto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <!-- TOP BTN -->
+    <a id="top" class="show icon-chevroneUp"></a>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="/" class="header-logo"><img src="image/logo.png" alt=""></a>
+        <a href="/" class="d-xl-none d-block"><img src="image/mobile-logo.png" alt=""></a>
+        <div class="header-list d-md-flex d-none">
+            <a href="/" style="font-weight: 700;">Trade-in</a>
+            <a href="newcars.html">Новые авто</a>
+            <a href="oldcars.html">Авто с пробегом</a>
+            <a href="/" class="d-xl-inline-block d-none">Автокредит</a>
+            <a href="/" class="d-xl-inline-block d-none">Автоблог</a>
+            <a href="contacts.html" class="d-xxl-inline-block d-none">Контакты</a>
+            <div class="dropdown d-xl-block d-none">
+              <a class="icon-chevroneDown" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"></a>
+              <ul class="dropdown-menu">
+                <li class="d-xxl-none d-inline-block"><a href="contacts.html">Контакты</a></li>
+                <li><a href="/">О нас</a></li>
+              </ul>
+            </div>
+        </div>
+        <button class="rateCarBtn d-lg-block d-none">Оценить авто</button>
+        <div class="d-flex gap-4">
+            <div class="header-contacts">
+                <a href="mailto:">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" fill="#282828" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" fill="#282828"/>
+                        <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="https://t.me/olamavto_uz">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0627 20C17.7344 20 17.3939 19.8946 17.147 19.7163L12.8279 16.6709C12.7797 16.6366 12.7095 16.5729 12.6488 16.5574L12.2756 16.8837C12.1513 17.0019 12.0417 17.1059 11.9176 17.2245C11.85 17.2891 11.7978 17.3179 11.7281 17.3849L10.8225 18.2267C10.479 18.5532 10.0184 18.9975 9.48399 18.9975L9.82782 14.8225C9.89885 14.318 9.84093 14.5684 10.2154 14.2072L18.3762 7.11415C18.4882 7.00809 18.5378 6.96786 18.5006 6.81624C18.1712 6.66602 17.9265 6.87944 17.7083 7.0091L7.27462 13.2473L2.46491 11.8598C2.28836 11.8026 2 11.6582 2 11.4504C2 11.1812 2.1264 11.0177 2.34702 10.8723C2.68876 10.647 3.71474 10.3024 4.11217 10.1664L20.4542 4.17096C20.9228 4.00644 21.4069 3.84105 21.7768 4.28928C22.1738 4.77051 21.9461 5.46258 21.8168 5.99546L19.0098 18.5545C18.9043 19.0614 18.7701 20 18.0627 20L18.0627 20Z" fill="#282828"/>
+                    </svg>
+                </a>
+                <div class="dropdown">
+                    <a class="phoneDropdown" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/">Заказать звонок</a></li>
+                      <li><a href="1312">Позвонить</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <a href="/" class="langBtn d-xl-flex d-none">Ру</a>
+            <button class="burger" data-bs-toggle="offcanvas" data-bs-target="#burgerMenu" aria-controls="offcanvasRight">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="burgerMenu" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header justify-content-end gap-3">
+                <a href="/" class="langBtn">Ру</a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="header-list d-flex flex-column align-items-start">
+                    <a href="/" style="font-weight: 700;">Trade-in</a>
+                    <a href="/">Новые авто</a>
+                    <a href="/">Авто с пробегом</a>
+                    <a href="/">Автокредит</a>
+                    <a href="/">Автоблог</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="/">О нас</a>
+                </div>
+            </div>
+            <div class="offcanvas-footer">
+                <div>
+                    <a href="/">г. Ташкент, Яшнабадский район, ул. Элбека, 61/3</a>
+                    <div class="header-contacts gap-4 mt-4">
+                        <a href="mailto:">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" fill="#282828" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" fill="#282828"/>
+                                <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/olamavto_uz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0627 20C17.7344 20 17.3939 19.8946 17.147 19.7163L12.8279 16.6709C12.7797 16.6366 12.7095 16.5729 12.6488 16.5574L12.2756 16.8837C12.1513 17.0019 12.0417 17.1059 11.9176 17.2245C11.85 17.2891 11.7978 17.3179 11.7281 17.3849L10.8225 18.2267C10.479 18.5532 10.0184 18.9975 9.48399 18.9975L9.82782 14.8225C9.89885 14.318 9.84093 14.5684 10.2154 14.2072L18.3762 7.11415C18.4882 7.00809 18.5378 6.96786 18.5006 6.81624C18.1712 6.66602 17.9265 6.87944 17.7083 7.0091L7.27462 13.2473L2.46491 11.8598C2.28836 11.8026 2 11.6582 2 11.4504C2 11.1812 2.1264 11.0177 2.34702 10.8723C2.68876 10.647 3.71474 10.3024 4.11217 10.1664L20.4542 4.17096C20.9228 4.00644 21.4069 3.84105 21.7768 4.28928C22.1738 4.77051 21.9461 5.46258 21.8168 5.99546L19.0098 18.5545C18.9043 19.0614 18.7701 20 18.0627 20L18.0627 20Z" fill="#282828"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown">
+                            <a class="phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/">Заказать звонок</a></li>
+                              <li><a href="tel:1312">Позвонить</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+                <button class="burger-menu_btn">Оценить авто</button>
+            </div>
+          </div>
+    </header>
+    <div class="header-line"></div>
+    <!-- HEADER END -->
+    <!-- ABOUT US -->
+    <h2 class="title container">О компании</h2>
+    <section class="about-us container">
+      <div class="about-us_img d-lg-none d-block"><img src="image/about-us.png" alt=""></div>
+      <div class="about-us_info">
+        <h5>Компания Olamavto специализируется на трейд-ине, продаже новых и подержанных автомобилей <br><br>
+          Предлагаем широкий выбор марок и моделей Chevrolet</h5>
+          <div class="about-company_numbers gap-xxl-5 gap-3">
+            <div class="about-company_number">
+                <h6>10 лет</h6>
+                <p>на рынке Узбекистана</p>
+            </div>
+            <div class="about-company_number">
+                <h6>10 000+</h6>
+                <p>заключено договоров</p>
+            </div>
+            <div class="about-company_number">
+                <h6>1 000+</h6>
+                <p>продано новых автомобилей</p>
+            </div>
+            <div class="about-company_number">
+                <h6>50 000+</h6>
+                <p>обменено автомобилей по программе Trade-in</p>
+            </div>
+        </div>
+      </div>
+      <div class="about-us_text">
+        <img class="d-lg-block d-none" src="image/about-us.png" alt="">
+        <p>Мы являемся официальным дилером компании «Chevrolet» в Узбекистане и представляем комплексные услуги по продаже автомобилей, запчастей и сервисному обслуживанию, соответствующие мировым стандартам 3S.</p>
+          <p>Мы предлагаем широкий выбор марок и моделей Chevrolet, чтобы удовлетворить потребности различных клиентов.</p>
+          <p>
+            Наша компания предлагает удобную услугу трейд-ина, позволяющую клиентам обменять свой старый автомобиль на новый или более подходящий для их потребностей. Мы оцениваем старые автомобили по справедливым ценам и предлагаем адекватное предложение на замену.<br>
+            Все наши подержанные автомобили проходят тщательную проверку, чтобы гарантировать их надежность и безопасность перед продажей.
+          </p>
+          <p>Мы стремимся предоставлять высокий уровень обслуживания и персонализированный подход к каждому клиенту. Наши опытные сотрудники всегда готовы помочь вам выбрать автомобиль, который лучше всего соответствует вашим потребностям и бюджету.</p>
+          <p>Компания Olamavto гордится своей репутацией надежного и честного партнера для продажи и покупки автомобилей. Мы стремимся создать долгосрочные отношения с нашими клиентами, предлагая им высокое качество, разумные цены и превосходный сервис.</p>
+          <p>Если вы ищете надежную компанию, занимающуюся трейд-ином и продажей новых и подержанных автомобилей, обратитесь к нам. Мы готовы помочь вам сделать правильный выбор и обеспечить приятный опыт покупки автомобиля.</p>
+      </div>
+    </section>
+    <!-- ABOUT US ENS -->
+    <!-- CALLBACK FORM -->
+    <section class="container callback">
+      <h2 class="title">Воплотите свои мечты!</h2>
+      <h6>Оставьте заявку и cтаньте обладателем нового автомобиля!</h6>
+      <div class="d-flex gap-4 justify-content-xl-start justify-content-around">
+        <img src="image/callback.png" alt="">
+        <form action="url" class="callback-form">
+          <div class="callback-form_content gap-2">
+            <input type="text" placeholder="Имя" required>
+            <input type="text" placeholder="+998 Телефон" data-phone-pattern="" required>
+            <div class="callback-form_checkbox">
+              <input type="checkbox" id="callbackFormCheckbox">
+              <label for="callbackFormCheckbox">Я согласен(а) на обработку персональных данных</label>
+            </div>
+            <span class="captcha">Капча</span>
+            <button type="submit" id="callbackFormSubmitBtn">Заказать звонок</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- CALLBACK FORM END -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container d-flex justify-content-between flex-xxl-row flex-column gap-xl-5 gap-4">
+            <div class="footer-left">
+                    <a href="/" class="footer-adres">г. Ташкент, Яшнабадский район, ул. Элбека, 61/3</a>
+                    <div class="footer-contacts gap-4 mt-xxl-4 mt-0 d-flex align-items-center">
+                        <div class="dropdown">
+                            <a class="footer-phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/">Заказать звонок</a></li>
+                              <li><a href="tel:1312">Позвонить</a></li>
+                            </ul>
+                        </div>
+                        <a href="https://t.me/olamavto_uz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0627 20C17.7344 20 17.3939 19.8946 17.147 19.7163L12.8279 16.6709C12.7797 16.6366 12.7095 16.5729 12.6488 16.5574L12.2756 16.8837C12.1513 17.0019 12.0417 17.1059 11.9176 17.2245C11.85 17.2891 11.7978 17.3179 11.7281 17.3849L10.8225 18.2267C10.479 18.5532 10.0184 18.9975 9.48399 18.9975L9.82782 14.8225C9.89885 14.318 9.84093 14.5684 10.2154 14.2072L18.3762 7.11415C18.4882 7.00809 18.5378 6.96786 18.5006 6.81624C18.1712 6.66602 17.9265 6.87944 17.7083 7.0091L7.27462 13.2473L2.46491 11.8598C2.28836 11.8026 2 11.6582 2 11.4504C2 11.1812 2.1264 11.0177 2.34702 10.8723C2.68876 10.647 3.71474 10.3024 4.11217 10.1664L20.4542 4.17096C20.9228 4.00644 21.4069 3.84105 21.7768 4.28928C22.1738 4.77051 21.9461 5.46258 21.8168 5.99546L19.0098 18.5545C18.9043 19.0614 18.7701 20 18.0627 20L18.0627 20Z" fill="#282828"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z" fill="#282828" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" fill="#282828"/>
+                                <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                <div class="footer-text d-xxl-block d-none">
+                    <p>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А также онлайн-площадка по продаже автомобилей с пробегом.</p>
+                    <p>Дизайн и разработка сайта — OOO «Optimize»</p>
+                    <p>© 2023 Olamavto &nbsp;&nbsp;&nbsp; Все права защищены</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-main_links">
+                    <li><a href="/"><strong style="font-weight: 800;">Trade-in</strong></a></li>
+                    <li><a href="/"><strong>Новые авто</strong></a></li>
+                    <li><a href="/"><strong>Авто с пробегом</strong></a></li>
+                    <li><a href="/"><strong>Автоблог</strong></a></li>
+                    <li class="d-md-none d-block"><a href="/"><strong>О компании</strong></a></li>
+                    <li class="d-md-none d-block"><a href="contacts.html"><strong>Контакты</strong></a></li>
+                    <button class="rateCarBtn d-lg-block d-none">Оценить авто</button>
+                </ul>
+                <div class="d-md-flex d-none flex-lg-column flex-row gap-4 footer-credits">
+                    <ul>
+                        <li><a href="/"><strong>Автокредит</strong></a></li>
+                        <li><a href="/">Кредит от Kapital Bank</a></li>
+                        <li><a href="/">Кредит от Anor Bank</a></li>
+                        <li><a href="/">Кредит от Asaka Bank</a></li>
+                    </ul>
+                    <ul class="mt-lg-4 mt-0">
+                        <li><a href="/"><strong>О компании</strong></a></li>
+                        <li><a href="contacts.html"><strong>Контакты</strong></a></li>
+                        <button class="rateCarBtn d-lg-none d-block">Оценить авто</button>
+                    </ul>
+                </div>
+                <div class="custom-accordion d-md-none d-flex w-100">
+                    <div class="custom-accordion-item">
+                      <div class="custom-accordion-header">
+                            <h5><strong>Автокредит</strong></h5>
+                            <div class="custom-accordion-arrow">
+                              <img src="image/icons/chevrone-accordion.svg" alt="">
+                          </div>
+                      </div>
+                      <div class="custom-accordion-content">
+                        <ul class="custom-accordion-list footer-avto_list">
+                            <li><a href="/">Кредит от Kapital Bank</a></li>
+                            <li><a href="/">Кредит от Anor Bank</a></li>
+                            <li><a href="/">Кредит от Asaka Bank</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                </div>
+                <button class="rateCarBtn d-md-none d-block w-100 mt-1 mb-2">Оценить авто</button>
+                <ul class="footer-avto_list d-md-flex d-none">
+                    <li><a href="allcars.html"><strong>Каталог автомобилей</strong></a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Nexia</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Nexia</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                    <li><a href="/">Chevrolet Captiva</a></li>
+                </ul>
+                <div class="custom-accordion d-md-none d-flex w-100">
+                    <div class="custom-accordion-item">
+                      <div class="custom-accordion-header">
+                            <h5><strong>Каталог автомобилей</strong></h5>
+                            <div class="custom-accordion-arrow">
+                              <img src="image/icons/chevrone-accordion.svg" alt="">
+                          </div>
+                      </div>
+                      <div class="custom-accordion-content">
+                        <ul class="custom-accordion-list footer-avto_list">
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Nexia</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Nexia</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                            <li><a href="/">Chevrolet Captiva</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text d-xxl-none d-block">
+                <p>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А также онлайн-площадка по продаже автомобилей с пробегом.</p>
+                <p>Дизайн и разработка сайта — OOO «Optimize»</p>
+                <p>© 2023 Olamavto &nbsp;&nbsp;&nbsp; Все права защищены</p>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="user-agree">
+                <p>Предложение не является публичной офертой. Сведения о ценах на продукцию бренда Chevrolet, содержащиеся на сайте, носят исключительно информационный характер. Указанные цены могут отличаться от действительных цен в зависимости от комплектации. Для получения подробной информации об актуальных ценах на продукцию Chevrolet обращайтесь в офис компании Olamavto. Представленное изображение автомобиля может отличаться от реализуемого.</p>
+                <p>Приобретение любой продукции бренда Chevrolet осуществляется в соответствии с условиями индивидуального договора купли-продажи.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
