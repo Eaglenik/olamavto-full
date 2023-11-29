@@ -21,7 +21,7 @@
         <a href="/" class="header-logo"><img src="image/logo.png" alt=""></a>
         <a href="/" class="d-xl-none d-block"><img src="image/mobile-logo.png" alt=""></a>
         <div class="header-list d-md-flex d-none">
-            <a href="trade-in.html" style="font-weight: 700;">Trade-in</a>
+            <a href="/" style="font-weight: 700;">Trade-in</a>
             <a href="newcars.html">Новые авто</a>
             <a href="oldcars.html">Авто с пробегом</a>
             <a href="credit.html" class="d-xl-inline-block d-none">Автокредит</a>
@@ -72,7 +72,7 @@
             </div>
             <div class="offcanvas-body">
                 <div class="header-list d-flex flex-column align-items-start">
-                    <a href="trade-in.html" style="font-weight: 700;">Trade-in</a>
+                    <a href="/" style="font-weight: 700;">Trade-in</a>
                     <a href="/">Новые авто</a>
                     <a href="/">Авто с пробегом</a>
                     <a href="credit.html">Автокредит</a>
@@ -100,13 +100,13 @@
                         <div class="dropdown">
                             <a class="phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a></li>
+                                <li><a href="/">Заказать звонок</a></li>
                               <li><a href="tel:1312">Позвонить</a></li>
                             </ul>
                           </div>
                     </div>
                 </div>
-                <button class="burger-menu_btn" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+                <button class="burger-menu_btn">Оценить авто</button>
             </div>
         </div>
     </header>
@@ -167,106 +167,100 @@
         </div>
     </div>
     <!-- HEADER END -->
-    <!-- MAIN SLIDER -->
+    <!-- MAIN IMG -->
     <section style="position: relative;">
-        <div class="main-slider owl-carousel">
-            <div class="main-slider_item">
-                <div class="main-slider_text container">
-                    <h2>автомобили Chevrolet</h2>
-                    <p>Помогут осуществить вашу автомобильную мечту…</p>
-                    <button>Выбрать автомобиль</button>
-                </div>
-                <div class="main-slider_img"><img src="image/slider.png" alt=""></div>
+            <div class="trade-in">
+              <section class="container d-xxl-block d-none" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Trade-in</li>
+                </ol>
+              </section>
+              <div class="main-slider_text container">
+                    <h2>Новый автомобиль</h2>
+                    <p>в обмен на ваш с пробегом по программе Трейд-ин</p>
+                    <a href="#questionsForm">Оставить заявку</a>
+              </div>
+              <div class="trade-in_img"><img src="image/trade-in.png" alt=""></div>
             </div>
-            <div class="main-slider_item">
-                <div class="main-slider_text container">
-                    <h2>автомобили Chevrolet 2</h2>
-                    <p>Помогут осуществить вашу автомобильную мечту…</p>
-                    <button>Выбрать автомобиль</button>
+    </section>
+    <!-- MAIN IMG END -->
+    <section class="container trade-in_info d-flex justify-content-between">
+      <h2 class="title">Что такое Трейд-ин?</h2>
+      <h6>Это процесс, при котором вы сдаёте свою старую машину и получаете скидку на покупку нового автомобиля.<br>
+        Трейд-ин позволит вам избавиться от старого и сэкономить на покупке нового!</h6>
+    </section>
+    <!-- TRADE-IN ANIMATION -->
+    <section class="container trade-in_animation">
+        <h2 class="title">Как работает Трейд-ин</h2>
+        <div class="trade-in_animation--content">
+            <div id="tradeInAnimationItem1" class="trade-in_animation--item">
+                <div class="trade-in_animation--imgs">
+                    <img class="trade-in_animation--car" src="image/animation/car (5).svg" alt="">
+                    <img class="trade-in_animation--circle" src="image/animation/circle (5).svg" alt="">
                 </div>
-                <div class="main-slider_img"><img src="image/slider.png" alt=""></div>
+                <p>Вы приезжаете к нам в автосалон на своём автомобиле</p>
             </div>
-            <div class="main-slider_item">
-                <div class="main-slider_text container">
-                    <h2>автомобили Chevrolet 3</h2>
-                    <p>Помогут осуществить вашу автомобильную мечту…</p>
-                    <button>Выбрать автомобиль</button>
-                </div>
-                <div class="main-slider_img"><img src="image/slider.png" alt=""></div>
+            <div class="tradein-animation_line">
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="100" viewBox="0 0 6 100" fill="none">
+                <path d="M3 0V100" stroke="#FFABA5" stroke-width="3" stroke-dasharray="20 10"/>
+                </svg>
             </div>
-        </div>
-        <div class="container form-container" style="position: relative;">
-            <!-- ПРИ ВЫБОРЕ ПУНКТА УЖЕ РЕАЛИЗОВАНА ОТПРАВКА AJAX ЗАПРОСА, НУЖНЛО ЛИШЬ В JS УКАЗАТЬ ФАЙЛ PHP НА 38 СТРОКЕ -->
-            <form class="main-slider_form">
-                <div class="main-slider_form--tabs">
-                    <button type="button" id="tabAllAvto" class="selected">Все авто</button>
-                    <button type="button" id="tabNewAvto">Новые авто</button>
-                    <button type="button" id="tabOldAvto">Авто с пробегом</button>
+            <div id="tradeInAnimationItem2" class="trade-in_animation--item">
+                <div class="trade-in_animation--imgs">
+                    <img class="trade-in_animation--car" src="image/animation/car (4).svg" alt="">
+                    <img class="trade-in_animation--circle" src="image/animation/circle (4).svg" alt="">
                 </div>
-                <div class="d-flex gap-3 align-items-lg-end align-items-start flex-lg-row flex-column">
-                    <div class="d-flex gap-3 flex-wrap">
-                        <select name="brand" id="brand" class="custom-select" placeholder="Марка" data-brand="true">
-                            <option value="Chevrolet" class="brand">Chevrolet</option>
-                        </select>
-                        <select name="model" id="model" class="custom-select modelList disabled" placeholder="Модель" data-brand="true">
-                            <option value="Onix" class="model">Onix</option>
-                            <option value="Nexia" class="model">Nexia</option>
-                        </select>
-                    </div>
-                    <button id="mainSliderFindAvto" type="submit">Найдено <span id="mainSliderFindAvtoCount">99 930</span> авто</button>
+                <p>Мы проверяем, соответствует ли его состояние описанию</p>
+            </div>
+            <div class="tradein-animation_line">
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="100" viewBox="0 0 6 100" fill="none">
+                    <path d="M3 0V100" stroke="#FF8279" stroke-width="3" stroke-dasharray="20 10"/>
+                  </svg>
+            </div>
+            <div id="tradeInAnimationItem3" class="trade-in_animation--item">
+                <div class="trade-in_animation--imgs">
+                    <img class="trade-in_animation--car" src="image/animation/car (3).svg" alt="">
+                    <img class="trade-in_animation--circle" src="image/animation/circle (3).svg" alt="">
                 </div>
-            </form>
+                <p>Вы получаете честную цену и выбираете новый автомобиль</p>
+            </div>
+            <div class="tradein-animation_line">
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="100" viewBox="0 0 6 100" fill="none">
+                    <path d="M3 0V100" stroke="#FF584C" stroke-width="3" stroke-dasharray="20 10"/>
+                  </svg>
+            </div>
+            <div id="tradeInAnimationItem4" class="trade-in_animation--item">
+                <div class="trade-in_animation--imgs">
+                    <img class="trade-in_animation--car" src="image/animation/car (2).svg" alt="">
+                    <img class="trade-in_animation--circle" src="image/animation/circle (2).svg" alt="">
+                </div>
+                <p>Вы используете стоимость своего автомобиля как разницу при оплате или как первоначальный взнос при покупке в кредит</p>
+            </div>
+            <div class="tradein-animation_line">
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="100" viewBox="0 0 6 100" fill="none">
+                    <path d="M3 0V100" stroke="#FF2E1F" stroke-width="3" stroke-dasharray="20 10"/>
+                  </svg>
+            </div>
+            <div id="tradeInAnimationItem5" class="trade-in_animation--item">
+                <div class="trade-in_animation--imgs">
+                    <img class="trade-in_animation--car" src="image/animation/car (1).svg" alt="">
+                    <img class="trade-in_animation--circle" src="image/animation/circle (1).svg" alt="">
+                </div>
+                <p><strong>Вы уезжаете на новом авто!</strong></p>
+            </div>
         </div>
     </section>
-    <!-- MAIN SLIDER END -->
-    <!-- ABOUT TRADE-IN -->
-    <section class="container about_trade-in">
-        <h2 class="title">Trade-in</h2>
-        <div class="d-flex justify-content-md-between justify-content-center align-items-end">
-            <h6>Новый автомобиль за 2 часа в обмен на ваш с пробегом</h6>
-            <a href="trade-in.html" class="d-md-block d-none link-to-page">О программе Trade-in</a>
-        </div>
-        <div class="about_trade-in__points">
-            <div class="about_trade-in__point">
-                <span>1</span>
-                <p><a href="/">Узнайте</a> предварительную стоимость вашего автомобиля прямо сейчас на сайте</p>
-            </div>
-            <div class="about_trade-in__point">
-                <span>2</span>
-                <p>Посетите дилерский центр для осмотра и оценки вашего автомобиля</p>
-            </div>
-            <div class="about_trade-in__point">
-                <span>3</span>
-                <p>Выберите любую модель Chevrolet в обмен на свой автомобиль</p>
-            </div>
-            <div class="about_trade-in__point last-point">
-                <span>4</span>
-                <p>Наслаждайтесь новым автомобилем</p>
-            </div>
-        </div>
-        <h6>Автомобили к обмену</h6>
-        <div class="about_trade-in__avto">
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Nexia 3</a>
-            <a href="/">Chevrolet Onix</a>
-            <a href="/">Chevrolet Malibu 2</a>
-            <a href="/">Chevrolet Captiva</a>
-            <a href="/">Chevrolet Tracker</a>
-            <a href="/">Chevrolet Lacetti</a>
-            <a href="/">Chevrolet Cobalt</a>
-            <a href="/">Chevrolet Trailblazer</a>
-            <a href="/">Chevrolet Cruze</a>
-            <a href="/">Chevrolet Equinox</a>
-            <a href="/">Chevrolet Damas</a>
-        </div>
-        <div class="d-md-none mt-5 d-flex justify-content-center">
-            <a href="trade-in.html">О программе Trade-in</a>
-        </div>
+    <!-- TRADE-IN ANIMATION END -->
+    <!-- TRADE-IN BTNS -->
+    <section class="container tradein-btns">
+        <a href="#questionsForm">Оставить заявку</a>
+        <button data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить онлайн</button>
     </section>
-    <!-- ABOUT TRADE-IN END -->
+    <!-- TRADE-IN BTNS END -->
     <!-- NEW AVTO -->
     <section class="container">
-        <h2 class="title">Новые авто</h2>
+        <h2 class="title">Автомобили к обмену</h2>
         <div class="newavto-slider owl-carousel">
             <div class="newavto-slider_item">
                 <div class="newavto-slider_item--img"><img src="image/avto/onix.png" alt=""></div>
@@ -301,228 +295,6 @@
         </div>
     </section>
     <!-- NEW AVTO END -->
-    <!-- OLAM INFO -->
-    <section class="container">
-        <div class="olam-info_slider owl-carousel">
-            <div class="olam-info_slider--card">
-                <span>Автокредит</span>
-                <div class="olam-info_slider--card_content">
-                    <img src="image/red-circle (2).png" alt="">
-                    <img src="image/grey-circles.png" alt="">
-                    <img src="image/image (1).png" alt="">
-                    <div class="olam-info_slider--card_text">
-                        <h6>Начните свой путь к новому автомобилю уже сегодня!</h6>
-                        <ul>
-                            <li>Гибкие условия</li>
-                            <li>Минимальный первоначальный взнос</li>
-                            <li>Конкурентные процентные ставки</li>
-                            <li>Удобные ежемесячные платежи</li>
-                        </ul>
-                        <a href="/">Получить автокредит</a>
-                    </div>
-                </div>
-            </div>
-            <div class="olam-info_slider--card two-card">
-                <span>Онлайн-оценка</span>
-                <div class="olam-info_slider--card_content">
-                    <img class="olam-info_img1" src="image/red-circle (1).png" alt="">
-                    <img src="image/grey-circles.png" alt="">
-                    <img src="image/image (2).png" alt="">
-                    <div class="olam-info_slider--card_text">
-                        <h6>Оцените свой автомобиль онлайн, не выходя из дома</h6>
-                        <p>Узнайте предварительную стоимость вашего автомобиля на сайте прямо сейчас и заплатите меньше за новую!</p>
-                        <a href="#" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить автомобиль</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- OLAM INFO END -->
-    <!-- OLD AVTO -->
-    <section class="container">
-        <div class="d-flex justify-content-between flex-lg-row flex-column align-items-md-start align-items-center mb-xl-0 mb-3">
-            <h2 class="title">Авто с пробегом</h2>
-            <a href="/" class="link-to-page oldavto-allBtn d-sm-block d-none">Все авто с пробегом</a>
-        </div>
-        <div class="oldavto_slider owl-carousel">
-            <a href="/" class="oldavto-item">
-                <div class="oldavto-item_img">
-                    <img src="image/avto/avto (1).png" alt="">
-                    <div class="oldavto-item_func">
-                        <span id="usedAvto">С пробегом</span>
-                        <span id="credit">Кредит</span>
-                    </div>
-                </div>
-                <div class="oldavto-item_info">
-                    <div>
-                        <h5 name="oldAvtoName">Chevrolet LACETTI</h5>
-                        <p name="oldAvtoPrice">177 000 000 сум</p>
-                    </div>
-                    <div class="oldavto-item_info--list">
-                        <ul class="oldavto-item_info--list_options">
-                            <li>Год выпуска</li>
-                            <li>Пробег, км</li>
-                            <li>Объем, л</li>
-                            <li>Трансмиссия</li>
-                        </ul>
-                        <ul>
-                            <li>2022</li>
-                            <li>4 771</li>
-                            <li>1.5</li>
-                            <li>МКПП</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="/" class="oldavto-item">
-                <div class="oldavto-item_img">
-                    <img src="image/avto/avto (2).png" alt="">
-                    <div class="oldavto-item_func">
-                        <span id="usedAvto">С пробегом</span>
-                        <span id="credit">Кредит</span>
-                    </div>
-                </div>
-                <div class="oldavto-item_info">
-                    <div>
-                        <h5 name="oldAvtoName">Chevrolet Cobalt</h5>
-                        <p name="oldAvtoPrice">163 000 000 сум</p>
-                    </div>
-                    <div class="oldavto-item_info--list">
-                        <ul class="oldavto-item_info--list_options">
-                            <li>Год выпуска</li>
-                            <li>Пробег, км</li>
-                            <li>Объем, л</li>
-                            <li>Трансмиссия</li>
-                        </ul>
-                        <ul>
-                            <li>2022</li>
-                            <li>63 777</li>
-                            <li>1.5</li>
-                            <li>АКПП</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="/" class="oldavto-item">
-                <div class="oldavto-item_img">
-                    <img src="image/avto/avto (3).png" alt="">
-                    <div class="oldavto-item_func">
-                        <span id="usedAvto">С пробегом</span>
-                        <span id="credit">Кредит</span>
-                    </div>
-                </div>
-                <div class="oldavto-item_info">
-                    <div>
-                        <h5 name="oldAvtoName">Chevrolet Lacetti</h5>
-                        <p name="oldAvtoPrice">127 000 000 сум</p>
-                    </div>
-                    <div class="oldavto-item_info--list">
-                        <ul class="oldavto-item_info--list_options">
-                            <li>Год выпуска</li>
-                            <li>Пробег, км</li>
-                            <li>Объем, л</li>
-                            <li>Трансмиссия</li>
-                        </ul>
-                        <ul>
-                            <li>2015</li>
-                            <li>148 205</li>
-                            <li>1.5</li>
-                            <li>МКПП</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="/" class="oldavto-item">
-                <div class="oldavto-item_img">
-                    <img src="image/avto/avto (1).png" alt="">
-                    <div class="oldavto-item_func">
-                        <span id="usedAvto">С пробегом</span>
-                        <span id="credit">Кредит</span>
-                    </div>
-                </div>
-                <div class="oldavto-item_info">
-                    <div>
-                        <h5 name="oldAvtoName">Chevrolet LACETTI</h5>
-                        <p name="oldAvtoPrice">177 000 000 сум</p>
-                    </div>
-                    <div class="oldavto-item_info--list">
-                        <ul class="oldavto-item_info--list_options">
-                            <li>Год выпуска</li>
-                            <li>Пробег, км</li>
-                            <li>Объем, л</li>
-                            <li>Трансмиссия</li>
-                        </ul>
-                        <ul>
-                            <li>2022</li>
-                            <li>4 771</li>
-                            <li>1.5</li>
-                            <li>МКПП</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="/" class="oldavto-item">
-                <div class="oldavto-item_img">
-                    <img src="image/avto/avto (2).png" alt="">
-                    <div class="oldavto-item_func">
-                        <span id="usedAvto">С пробегом</span>
-                        <span id="credit">Кредит</span>
-                    </div>
-                </div>
-                <div class="oldavto-item_info">
-                    <div>
-                        <h5 name="oldAvtoName">Chevrolet Cobalt</h5>
-                        <p name="oldAvtoPrice">163 000 000 сум</p>
-                    </div>
-                    <div class="oldavto-item_info--list">
-                        <ul class="oldavto-item_info--list_options">
-                            <li>Год выпуска</li>
-                            <li>Пробег, км</li>
-                            <li>Объем, л</li>
-                            <li>Трансмиссия</li>
-                        </ul>
-                        <ul>
-                            <li>2022</li>
-                            <li>63 777</li>
-                            <li>1.5</li>
-                            <li>АКПП</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-            <a href="/" class="oldavto-item">
-                <div class="oldavto-item_img">
-                    <img src="image/avto/avto (3).png" alt="">
-                    <div class="oldavto-item_func">
-                        <span id="usedAvto">С пробегом</span>
-                        <span id="credit">Кредит</span>
-                    </div>
-                </div>
-                <div class="oldavto-item_info">
-                    <div>
-                        <h5 name="oldAvtoName">Chevrolet Lacetti</h5>
-                        <p name="oldAvtoPrice">127 000 000 сум</p>
-                    </div>
-                    <div class="oldavto-item_info--list">
-                        <ul class="oldavto-item_info--list_options">
-                            <li>Год выпуска</li>
-                            <li>Пробег, км</li>
-                            <li>Объем, л</li>
-                            <li>Трансмиссия</li>
-                        </ul>
-                        <ul>
-                            <li>2015</li>
-                            <li>148 205</li>
-                            <li>1.5</li>
-                            <li>МКПП</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <a href="/" class="link-to-page d-sm-none d-block w-100 text-center mt-3">Все авто с пробегом</a>
-    </section>
-    <!-- OLD AVTO END -->
     <!-- Customer Reviews -->
     <section class="customer-reviews">
             <div class="container">
@@ -549,102 +321,119 @@
         <img src="image/review.png" alt="">
     </section>
     <!-- Customer Reviews END -->
-    <!-- ABOUT COMPANY -->
-    <section class="container about-company">
-        <h2 class="title">О компании</h2>
-        <div class="row flex-lg-row flex-column justify-content-between">
-            <div class="about-company_numbers col-xxl-5 col-lg-6 col-12">
-                <div class="about-company_number">
-                    <h6>10 лет</h6>
-                    <p>на рынке Узбекистана</p>
-                </div>
-                <div class="about-company_number">
-                    <h6>10 000+</h6>
-                    <p>заключено договоров</p>
-                </div>
-                <div class="about-company_number">
-                    <h6>1 000+</h6>
-                    <p>продано новых автомобилей</p>
-                </div>
-                <div class="about-company_number">
-                    <h6>50 000+</h6>
-                    <p>обменено автомобилей по программе Trade-in</p>
-                </div>
+    <!-- TRADE-IN ACCORDION -->
+    <section class="container trade-in-accordion">
+        <h2 class="title">Трейд-ин в Olamavto</h2>
+        <div class="custom-accordion gap-xl-5 gap-4">
+            <div class="custom-accordion-item active">
+              <div class="custom-accordion-header">
+                    <h5>Как оценивается автомобиль?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content" style="display: block;">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
             </div>
-            <div class="about-company_text col-xxl-5 col-lg-6 col-12">
-                <p>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А так же это онлайн-площадка по продаже автомобилей с пробегом.<br><br>
-                Официальный дилер Chevrolet в Узбекистане, Olamavto, представляет комплексные услуги по продаже автомобилей, запчастей и сервисному обслуживанию, соответствующие мировым стандартам 3S. Клиенты могут приобрести автомобили напрямую, воспользоваться программой Trade-In или приобрести проверенные автомобили с гарантией.</p>
-                <a href="about-us.html">Подробнее о компании</a>
+            <div class="custom-accordion-item">
+              <div class="custom-accordion-header">
+                    <h5>Какую скидку или выгоду можно получить с помощью трейд-ина?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
+            </div>
+            <div class="custom-accordion-item">
+              <div class="custom-accordion-header">
+                    <h5>Можно ли сдать 2 машины в трейд-ин?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
+            </div>
+            <div class="custom-accordion-item">
+              <div class="custom-accordion-header">
+                    <h5>Какие условия необходимо выполнить для трейд-ина?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
+            </div>
+            <div class="custom-accordion-item">
+              <div class="custom-accordion-header">
+                    <h5>Могу ли я использовать трейд-ин, если у меня есть кредит или финансовые обязательства?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
+            </div>
+            <div class="custom-accordion-item">
+              <div class="custom-accordion-header">
+                    <h5>Как выбрать наилучшее предложение по трейд-ин?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
+            </div>
+            <div class="custom-accordion-item">
+              <div class="custom-accordion-header">
+                    <h5>Есть ли различия в трейд-ин для новых и подержанных товаров?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
+            </div>
+            <div class="custom-accordion-item">
+              <div class="custom-accordion-header">
+                    <h5>Какие альтернативные варианты есть, если не хочу использовать трейд-ин?</h5>
+                    <div class="custom-accordion-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M9.35909e-09 14.285L0 15.7136H14.2854V30H15.714V15.7136H30V14.285H15.714V0L14.2854 5.02982e-07V14.285L9.35909e-09 14.285Z" fill="#A1A1A1"/>
+                        </svg>
+                  </div>
+              </div>
+              <div class="custom-accordion-content">
+                <p>Оценка автомобиля в программе трейд-ин зависит от нескольких факторов, включая его состояние, историю обслуживания, пробег, популярность модели, спрос на подобные автомобили и текущую рыночную цену.</p>
+              </div>
             </div>
         </div>
     </section>
-    <!-- ABOUT COMPANY END -->
-    <!-- AUTOBLOG -->
-    <section>
-        <h2 class="title container">Автоблог</h2>
-        <div class="autoblog-slider owl-carousel">
-            <div class="autoblog-slider_item">
-                <div class="autoblog-slider_content container">
-                    <span>Автоновости</span>
-                    <div class="autoblog-slider_text">
-                        <div>
-                            <a href="/">Открываются договора на Cobalt, Lacetti и Damas</a>
-                            <p>Цены остались прежними, в продажу поступили все цвета, но количество автомобилей ограничено.<br><br>
-                                Поэтому заключить договор можно только в автосалоне, приложение и бот работать не будут.</p>
-                        </div>
-                        <div class="newavto-slider_item--btns">
-                            <a href="/">Все автоновости</a>
-                            <a href="/" class="link-to-page">Перейти в автоблог</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="autoblog-slider_img">
-                    <img src="image/autoblog.png" alt="">
-                </div>
-            </div>
-            <div class="autoblog-slider_item">
-                <div class="autoblog-slider_content container">
-                    <span>Автоновости</span>
-                    <div class="autoblog-slider_text">
-                        <div>
-                            <a href="/">Открываются договора на Cobalt, Lacetti и Damas</a>
-                            <p>Цены остались прежними, в продажу поступили все цвета, но количество автомобилей ограничено.<br><br>
-                                Поэтому заключить договор можно только в автосалоне, приложение и бот работать не будут.</p>
-                        </div>
-                        <div class="newavto-slider_item--btns">
-                            <a href="/">Подробнее о модели</a>
-                            <a href="/" class="link-to-page">Все новые авто</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="autoblog-slider_img ">
-                    <img src="image/autoblog.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- AUTOBLOG END -->
-    <!-- POPULAR AVTO -->
-    <section class="container popular-avto">
-        <h6>Популярные авто</h6>
-        <div class="popular-avto_links">
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-            <a href="/">Chevrolet Spark</a>
-        </div>
-    </section>
-    <!-- POPULAR AVTO END -->
+    <!-- TRADE-IN ACCORDION END -->
     <!-- QUESTIONS -->
-    <section class="questions">
+    <section class="questions" id="questionsForm">
         <div>
             <img class="questions-img_circle" src="image/form-circle.svg" alt="">
             <img class="questions-img_car" src="image/form-img.png" alt="">
@@ -694,7 +483,7 @@
                         <div class="dropdown">
                             <a class="footer-phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a></li>
+                                <li><a href="/">Заказать звонок</a></li>
                               <li><a href="tel:1312">Позвонить</a></li>
                             </ul>
                         </div>
@@ -719,13 +508,13 @@
             </div>
             <div class="footer-right">
                 <ul class="footer-main_links">
-                    <li><a href="trade-in.html"><strong style="font-weight: 800;">Trade-in</strong></a></li>
+                    <li><a href="/"><strong style="font-weight: 800;">Trade-in</strong></a></li>
                     <li><a href="/"><strong>Новые авто</strong></a></li>
                     <li><a href="/"><strong>Авто с пробегом</strong></a></li>
                     <li><a href="/"><strong>Автоблог</strong></a></li>
                     <li class="d-md-none d-block"><a href="about-us.html"><strong>О компании</strong></a></li>
                     <li class="d-md-none d-block"><a href="contacts.html"><strong>Контакты</strong></a></li>
-                    <button class="rateCarBtn d-lg-block d-none" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+                    <button class="rateCarBtn d-lg-block d-none">Оценить авто</button>
                 </ul>
                 <div class="d-md-flex d-none flex-lg-column flex-row gap-4 footer-credits">
                     <ul>
@@ -757,7 +546,7 @@
                       </div>
                     </div>
                 </div>
-                <button class="rateCarBtn d-md-none d-block w-100 mt-1 mb-2" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+                <button class="rateCarBtn d-md-none d-block w-100 mt-1 mb-2">Оценить авто</button>
                 <ul class="footer-avto_list d-md-flex d-none">
                     <li><a href="allcars.html"><strong>Каталог автомобилей</strong></a></li>
                     <li><a href="/">Chevrolet Captiva</a></li>
@@ -817,12 +606,16 @@
             </div>
         </div>
     </footer>
+   
+    
     <!-- FOOTER END -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

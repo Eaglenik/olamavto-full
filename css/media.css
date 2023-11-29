@@ -70,6 +70,7 @@
         height: 70px;
     }
     .newavto-slider_item span,
+    .oldcar span,
     .autoblog-slider_item span{
         font-size: 40px;
     }
@@ -101,7 +102,9 @@
     .contacts-adres,
     .credit h6,
     .about-us_info h5,
-    .callback h6{
+    .callback h6,
+    .trade-in_info h6,
+    .trade-in-accordion h5{
         font-size: 22px;
     }
     .olam-info_slider--card img:nth-of-type(1){
@@ -136,7 +139,9 @@
     .autoblog-slider_text p,
     .autoblog-slider_text a,
     .avto-equipment_item p,
-    .about-us_text p{
+    .about-us_text p,
+    .information-text h6,
+    .trade-in-accordion p{
         font-size: 18px;
     }
     .about-company_numbers{
@@ -269,11 +274,13 @@
         padding: 60px 90px;
         margin: 100px 30px;
     }
-    .avto-description_item{
+    .avto-description_item,
+    .oldcar-img img{
         height: 600px;
     }
     .avto-description_text,
-    .about-us_info{
+    .about-us_info,
+    .oldcar-text{
         max-width: 270px;
     }
     .avto-description_img,
@@ -304,12 +311,75 @@
     .callback img{
         max-width: 560px;
     }
-    .callback{
+    .callback,
+    .trade-in-accordion{
         margin-bottom: 100px;
     }
-    
+    .oldcar-img{
+        width: 73%;
+    }
+    .oldcar-text h5{
+        margin-bottom: 80px;
+    }
+    .oldcar-options{
+        max-width: 683px;
+    }
+    .oldcar-options .avto-options_list{
+        max-height: 600px;
+    }
+    .oldcar-options{
+        margin-top: 0;
+    }
+    .oldcar-back{
+        max-height: 755px;
+    }
+    .oldcar-back{
+        width: 753px;
+    }
+    .oldcar-equipment h5{
+        font-size: 32px;
+    }
+    .oldcar-equipment span{
+        font-size: 20px;
+    }
+    .similar-offers{
+        margin: 100px auto;
+    }
+    .information-text a{
+        margin-bottom: 40px;
+    }
+    .information-text p{
+        padding-top: 20px;
+    }
+    .information-text{
+        max-width: 753px;
+    }
+    .information-back{
+        width: 65%;
+        min-width: 820px;
+    }
+    .information-img{
+        height: 315px;
+        width: 40%;
+    }
+    .trade-in .main-slider_text{
+        padding-bottom: 50px;
+        margin-top: 0;
+    }
+    .trade-in_img{
+        height: 400px;
+    }
+    .trade-in_info{
+        margin-bottom: 100px;
+    }
+    .trade-in_info h6{
+        max-width: 753px;
+    }
 }
 @media (max-width:1200px){
+    .tradein-btns a, .tradein-btns button{
+        font-size: 17px;
+    }
     .header-logo{
         display: none;
     }
@@ -345,10 +415,12 @@
     .newavto-slider_item--btns a,
     .credit p,
     .credit-list li,
-    .about-us_text p{
+    .about-us_text p,
+    .oldcar-text p{
         font-size: 17px;
     }
-    .about_trade-in__avto a{
+    .about_trade-in__avto a,
+    .oldcar-text h5{
         font-size: 18px;
     }
     .title{
@@ -408,7 +480,11 @@
     .avtobanner a,
     .pagination-item a,
     .avto-options_list li,
-    .avto-description_text p{
+    .avto-description_text p,
+    .avto-options_list li,
+    .information-text h6,
+    .information-text a,
+    .trade-in-accordion p{
         font-size: 17px;
     }
     .avto-btns button, .avto-btns a{
@@ -492,8 +568,12 @@
     .avto-text{
         padding: 40px;
     }
-    .avto-description_item{
+    .avto-description_item,
+    .oldcar-img img{
         height: 550px;
+    }
+    .oldcar-text h6{
+        font-size: 28px;
     }
     .avto-description_text{
         max-width: 300px;
@@ -527,7 +607,8 @@
         padding: 30px;
     }
     .credit,
-    .about-us{
+    .about-us,
+    .oldcar{
         margin-bottom: 100px;
     }
     .callback-form{
@@ -540,6 +621,30 @@
     }
     .ratecarModal-content{
         margin-top: 20px;
+    }
+    .oldcar-text h5{
+        margin-bottom: 50px;
+    }
+    .oldcar-img{
+        width: 69%;
+    }
+    .oldcar-options{
+        max-width: 590px;
+    }
+    .information-content{
+        padding: 30px;
+        padding-top: 60px;
+    }
+    .information-text{
+        max-width: 670px;
+    }
+    .information-back{
+        width: 62%;
+        min-width: 700px;
+    }
+    .trade-in_info h6{
+        max-width: 560px;
+        font-size: 20px;
     }
 }
 @media (max-width:992px){
@@ -831,7 +936,8 @@
         padding-top: 0;
     }
     .newavto,
-    .search-avto{
+    .search-avto,
+    .oldcar{
         margin-bottom: 70px;
     }
     .newavto .left{
@@ -978,6 +1084,123 @@
     }
     .callback img{
         margin-top: 20px;
+    }
+    .oldcar-img{
+        position: relative;
+        top: unset;
+        width: 96%;
+    }
+    .oldcar-img img{
+        height: 500px;
+    }
+    .oldcar-content{
+        position: unset;
+    }
+    .oldcar-content span{
+        position: absolute;
+        top: -20px;
+        right: 20px;
+    }
+    .oldcar{
+        margin-top: 40px;
+    }
+    .oldcar-text{
+        max-width: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+    }
+    .oldcar-text .newavto-slider_item--btns{
+        min-width: 230px;
+        margin-top: 0;
+    }
+    .oldcar-text_info{
+        max-width: 490px;
+    }
+    .oldcar-text{
+        margin-top: 30px;
+    }
+    .oldcar-text h5{
+        margin-bottom: 0;
+    }
+    .oldcar-options,
+    .information-text{
+        max-width: unset;
+    }
+    .oldcar-options .avto-options_list{
+        max-height: 650px;
+    }
+    .oldcar-options .avto-options_list{
+        padding-bottom: 50px;
+    }
+    .similar-offers{
+        margin: 70px auto;
+    }
+    .information-img{
+        display: none;
+    }
+    .information-content{
+        flex-direction: column;
+        padding-top: 30px;
+        gap: 70px;
+    }
+    .information-back{
+        width: 100%;
+        top: 70px;
+        height: 66%;
+    }
+    .avto-btns img{
+        display: block;
+    }
+    .avto-btns p{
+        display: none;
+    }
+    .avto-short_content button,
+    .avto-short_content a{
+        width: 50px !important;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 13px;
+    }
+    .trade-in_img{
+        width: 50%;
+    }
+    .trade-in_info,
+    .trade-in-accordion{
+        margin-bottom: 70px;
+    }
+    .trade-in_info{
+        flex-direction: column;
+    }
+    .trade-in_info h6{
+        align-self: end;
+    }
+    .trade-in-accordion{
+        flex-direction: column;
+    }
+    .trade-in-accordion .title{
+        max-width: unset;
+    }
+    .trade-in_animation{
+        flex-direction: column;
+        align-items: center;
+    }
+    .trade-in_animation .title{
+        position: relative;
+        top: 0;
+    }
+    .trade-in_animation--item:hover .trade-in_animation--circle{
+        opacity: 0;
+    }
+    .trade-in_animation--item:hover p{
+        font-weight: 400;
+    }
+    .hover-effect .trade-in_animation--circle{
+        opacity: 1 !important;
     }
 }
 @media (max-width:768px){
@@ -1228,7 +1451,8 @@
         padding-left: unset;
     }
     .contacts-form input[type="text"],
-    .about-us img{
+    .about-us img,
+    .oldcar-img,.oldcar-options .avto-options_list li{
         width: 100%;
     }
     .contacts{
@@ -1237,11 +1461,15 @@
     .credit-options{
         padding: 30px 20px;
     }
+    .oldcar-text{
+        flex-direction: column;
+    }
     .credit-list li{
         gap: 10px;
     }
     .about-us img,
-    .about-us_img{
+    .about-us_img,
+    .oldcar-img img{
         height: 450px;
     }
     .callback-form{
@@ -1254,6 +1482,83 @@
     .callback h6{
         text-align: center;
         max-width: unset;
+    }
+    .oldcar-content span{
+        right: unset;
+    }
+    .oldcar-content{
+        align-items: center;
+    }
+    .oldcar-text h5{
+        margin-bottom: 30px;
+    }
+    .oldcar-options .avto-options_list{
+        max-height: unset;
+    }
+    .avto-options{
+        padding: 0 20px;
+    }
+    .oldcar-equipment h5{
+        font-size: 28px;
+    }
+    .oldcar{
+        margin-bottom: 40px;
+    }
+    .information-back{
+        display: none;
+    }
+    .information-content{
+        background: var(--white2);
+    }
+    .trade-in_img{
+        position: relative;
+        width: 100%;
+        left: 20px;
+        height: 350px;
+    }
+    .trade-in{
+        margin-bottom: 70px;
+    }
+    .trade-in_info{
+        align-items: center;
+    }
+    .trade-in_info h6{
+        align-self: unset;
+        max-width: unset;
+    }
+    .trade-in_info h2{
+        max-width: unset;
+    }
+    .trade-in_animation--item{
+        gap: 20px;
+    }
+    .tradein-animation_line svg{
+        height: 50px;
+    }
+    .trade-in_animation--item p{
+        font-size: 18px;
+    }
+    .trade-in_animation--imgs{
+        min-width: 90px;
+        height: 90px;
+    }
+    .tradein-animation_line {
+        padding: 10px 0 10px 43px;
+    }
+    .trade-in_animation--circle{
+        max-width: 110px;
+        height: 110px;
+    }
+    .trade-in_animation--car{
+        width: 40px;
+    }
+    .tradein-btns{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .tradein-btns{
+        margin: 70px auto;
     }
 }
 @media (max-width:576px){
@@ -1491,6 +1796,43 @@
     .about-us{
         margin-bottom: 70px;
     }
+    .oldcar-content span{
+        font-size: 26px;
+        border-radius: 10px;
+    }
+    .information-content{
+        padding: 20px;
+        gap: 50px;
+    }
+    .information-text h6,
+    .information-text a{
+        font-size: 16px;
+    }
+    .information-text a{
+        margin-bottom: 25px;
+    }
+    .callback-btn{
+        width: 100%;
+    }
+    .avto-short_info img{
+        display: none;
+    }
+    .trade-in_img{
+        left: 0;
+    }
+    .trade-in_info h6{
+        text-align: center;
+    }
+    .trade-in-accordion h5{
+        font-size: 20px;
+    }
+    .trade-in-accordion p{
+        padding-left: 0;
+    }
+    .tradein-btns a, .tradein-btns button{
+        width: 100%;
+        text-align: center;
+    }
 }
 @media (max-width:400px){
     .newavto-slider .owl-dots{
@@ -1507,6 +1849,9 @@
     .tradeinModal .tradeinModal-btn,
     #contacts-form_btn{
         width: 100%;
+    }
+    .avto-short_content .avto-btns{
+        width: unset;
     }
     .credit-btns a, .credit-btns button{
         max-width: unset;

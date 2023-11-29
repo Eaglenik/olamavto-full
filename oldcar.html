@@ -136,6 +136,36 @@
           </div>
         </div>
     </div>
+    <div class="modal fade" id="callBackModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered ratecarModal">
+          <div class="modal-content">
+            <div class="container ratecarModal-content callback">
+                <div class="d-flex justify-content-between flex-md-row flex-column-reverse align-items-md-start align-items-end">
+                    <h3 class="title">Воплотите свои мечты!</h3>
+                    <button class="ratecarModal-closeBtn" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        <img src="image/icons/rate-x.png" alt="" class="mt-0">
+                    </button>
+                </div>
+                <h6>Оставьте заявку и cтаньте обладателем нового автомобиля!</h6>
+                <div class="d-flex gap-4 justify-content-xl-start justify-content-around">
+                  <img src="image/callback.png" alt="">
+                  <form action="url" class="callback-form">
+                    <div class="callback-form_content gap-2">
+                      <input type="text" placeholder="Имя" required>
+                      <input type="text" placeholder="+998 Телефон" data-phone-pattern="" required>
+                      <div class="callback-form_checkbox">
+                        <input type="checkbox" id="callbackFormCheckbox">
+                        <label for="callbackFormCheckbox">Я согласен(а) на обработку персональных данных</label>
+                      </div>
+                      <span class="captcha">Капча</span>
+                      <button type="submit" id="callbackFormSubmitBtn">Оставить заявку</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
     <!-- HEADER END -->
     <!-- BREADCRUMB -->
     <section class="container d-md-block d-none" aria-label="breadcrumb">
@@ -148,209 +178,373 @@
     </section>
     <!-- BREADCRUMB END -->
     <!-- OLD AVTO -->
-    <section class="container">
-      <h2 class="title">Chevrolet Cobalt</h2>
-      <div class="newavto">
-          <div class="newavto-slider_item">
-              <div class="newavto-slider_item--img">
-                <img class="car-color-img is-active" src="image/avto/onix (5).png" alt="">
-              </div>
-              <span>от 150 000 000 сум</span>
-              <div class="newavto-slider_item--text">
-                  <div>
-                      <p>Практичный городской седан, автомобиль радует своим прекрасным техническим состоянием и экономичностью</p>
-                  </div>
-                  <div class="newavto-slider_item--btns">
-                      <a href="/">Подробнее о модели</a>
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#tradeinModal">Обменять по Trade-in</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- Модальное окно -->
-      <div class="modal fade" id="tradeinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content tradeinModal">
-                <div class="modal-header justify-content-end">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+    <section>
+      <h2 class="title container">Chevrolet Cobalt</h2>
+      <div class="oldcar">
+        <div class="oldcar-img">
+            <img src="image/avto/oldcar.png" alt="">
+        </div>
+        <div class="oldcar-content container">
+            <span>163 000 000 сум</span>
+            <div class="oldcar-text">
+                <div class="oldcar-text_info">
+                    <p>Практичный городской седан, автомобиль радует своим прекрасным техническим состоянием и экономичностью</p>
+                    <h6>269792</h6>
+                    <h5>Код товара</h5>
                 </div>
-                <div class="modal-body">
-                    <p>Для участия в программе Trade-In  узнайте предварительную стоимость своего автомобиля. Вы можете оценить его на сайте прямо сейчас.</p>
-                    <button class="tradeinModal-btn" data-bs-target="#ratecarModal" data-bs-toggle="modal">Оценить авто</button>
+                <div class="newavto-slider_item--btns">
+                    <a href="#questionsForm">Оставить заявку</a>
+                    <a href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a>
                 </div>
             </div>
         </div>
-    </div>
+      </div>
     </section>
     <!-- NEW AVTO END -->
     <!-- AVTO OPTIONS -->
     <section class="position-relative">
-      <div class="container d-flex align-items-lg-center align-items-start justify-content-between flex-lg-row flex-column">
-        <div class="avto-equipment">
+      <div class="container d-flex justify-content-between flex-lg-row flex-column">
+        <div class="avto-equipment oldcar-equipment">
           <div class="avto-equipment_item">
-            <h6>1.2 / 1.2 Turbo</h6>
-            <p>двигатель</p>
+            <h5>2022</h5>
+            <p>Год выпуска</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>90/132 л.с</h6>
-            <p>Максимальная мощность</p>
+            <h5>63 777</h5>
+            <p>Пробег, км</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>5МТ/6АТ</h6>
-            <p>Коробка передач</p>
+            <h5>1.5</h5>
+            <p>Двигатель, л</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>4,8/4.7 л</h6>
-            <p>Расход топлива</p>
+            <h5>На ходу</h5>
+            <p>Состояние</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>469 л</h6>
-            <p>Объем багажного отделения</p>
+            <span>106</span>
+            <p>Максимальная мощность, л.с</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>10.6 секунд</h6>
-            <p>Разгон до 100 км/ч</p>
+            <span>АКПП</span>
+            <p>Трансмиссия</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>170 км/ч</h6>
-            <p>Максимальная скорость</p>
+            <span>Бензин</span>
+            <p>Тип топлива</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>4474х1730х1471 мм</h6>
-            <p>Габариты</p>
+            <span>Белый</span>
+            <p>Цвет кузова</p>
           </div>
           <div class="avto-equipment_item">
-            <h6>1120 кг</h6>
-            <p>Вес</p>
+            <span>Передний</span>
+            <p>Привод</p>
           </div>
         </div>
-        <div class="avto-options">
-            <h6>В базовую комплектацию входит</h6>
+        <div class="avto-options oldcar-options">
+            <h6>В комплектацию данной модели входит</h6>
             <ul class="avto-options_list">
-              <li><img src="image/icons/plus.svg" alt=""> Рулевая колонка с регулировкой по высоте и вылету</li>
-              <li><img src="image/icons/plus.svg" alt=""> Кондиционер</li>
-              <li><img src="image/icons/plus.svg" alt=""> Мультимедиа система с Apple Carplay, Android Auto, Bluetooth на руле</li>
-              <li><img src="image/icons/plus.svg" alt=""> Датчик давления в шинах</li>
-              <li><img src="image/icons/plus.svg" alt=""> Электростеклоподъемники на всех дверях</li>
-              <li><img src="image/icons/plus.svg" alt=""> Подушки безопасности водителя и переднего пассажира</li>
-              <li><img src="image/icons/plus.svg" alt=""> Система курсовой устойчивости ESC</li>
-              <li><img src="image/icons/plus.svg" alt=""> Крепления для детских кресел ISOFIX</li>
-              <li><img src="image/icons/plus.svg" alt=""> Зеркала заднего вида с электроприводом (без подогрева)</li>
-              <li><img src="image/icons/plus.svg" alt=""> Ручки дверей в цвет кузова</li>
-              <li><img src="image/icons/plus.svg" alt=""> Докатка</li>
-              <li><img src="image/icons/plus.svg" alt=""> Ограничитель скорости</li>
-              <li><img src="image/icons/plus.svg" alt=""> Передние дисковые и задние барабанные тормоза с ABS</li>
-              <li><img src="image/icons/plus.svg" alt=""> Pадние парктроники (сенсор парковки)</li>
-              <li><img src="image/icons/plus.svg" alt=""> Ручная регулировка сиденья водителя по 6-ти направлениям</li>
+              <li><img src="image/icons/plus.svg" alt="">Электропривод зеркал</li>
+              <li><img src="image/icons/plus.svg" alt="">Антиблокировочная система (ABS)</li>
+              <li><img src="image/icons/plus.svg" alt="">Бортовой компьютер</li>
+              <li><img src="image/icons/plus.svg" alt="">Подушка безопасности водителя</li>
+              <li><img src="image/icons/plus.svg" alt="">Усилитель руля</li>
+              <li><img src="image/icons/plus.svg" alt="">Крепление детского кресла (задний ряд) ISOFIX</li>
+              <li><img src="image/icons/plus.svg" alt="">Электростеклоподъёмники задние</li>
+              <li><img src="image/icons/plus.svg" alt="">Блокировка замков задних дверей</li>
+              <li><img src="image/icons/plus.svg" alt="">Кондиционер</li>
+              <li><img src="image/icons/plus.svg" alt="">Центральный замок</li>
+              <li><img src="image/icons/plus.svg" alt="">Электростеклоподъёмники передние</li>
+              <li><img src="image/icons/plus.svg" alt="">Иммобилайзер</li>
+              <li><img src="image/icons/plus.svg" alt="">Регулировка руля по высоте</li>
+              <li><img src="image/icons/plus.svg" alt="">Диски 15</li>
+              <li><img src="image/icons/plus.svg" alt="">Электрообогрев боковых зеркал</li>
+              <li><img src="image/icons/plus.svg" alt="">Дневные ходовые огни</li>
+              <li><img src="image/icons/plus.svg" alt="">Противотуманные фары</li>
+              <li><img src="image/icons/plus.svg" alt="">Подушка безопасности пассажира</li>
+              <li><img src="image/icons/plus.svg" alt="">Система помощи при торможении (BAS, EBD)</li>
+              <li><img src="image/icons/plus.svg" alt="">ЭРА-ГЛОНАСС</li>
+              <li><img src="image/icons/plus.svg" alt="">Антиблокировочная система (ABS)</li>
             </ul>
-            <a href="#" class="download-price">Скачать прайс</a>
         </div>
       </div>
-      <div class="avto-options_back"></div>
+      <div class="avto-options_back oldcar-back"></div>
     </section>
     <!-- AVTO OPTIONS END -->
-    <!-- AVTO DESCRIPTIONS -->
-    <section class="avto-descriptions">
-        <div class="avto-description owl-carousel">
-            <div class="avto-description_item">
-                <div class="container">
-                    <div class="avto-description_text">
-                        <h6>Onix — это доступный переднеприводный бюджетный компактный седан C-класса </h6>
-                        <p>Автомобиль сочетает в себе стильный дизайн, современный интерьер и хорошие технические характеристики, все это по относительно невысокой цене.</p>
-                        <p>Chevrolet создал этот автомобиль без строгих ограничений на целевую аудиторию, включая молодёжь, семейные пары (с детьми) и даже пожилых людей.</p>
-                    </div>
-                </div>
-                <div class="avto-description_img">
-                    <img src="image/avto-decr/avto-decr (1).png" alt="">
-                </div>
-            </div>
-            <div class="avto-description_item">
-                <div class="container">
-                    <div class="avto-description_text">
-                        <h6>Onix — это доступный переднеприводный бюджетный компактный седан C-класса </h6>
-                        <p>На автомобиле установлиен 3-цилиндровый бензиновый двигатель рабочим объемом 1.2 литра с распределенным впрыском, 12-клапанным ГРМ и изменяемыми фазами газораспределения, доступный в двух исполнениях.</p>
-                    </div>
-                </div>
-                <div class="avto-description_img">
-                    <img src="image/avto-decr/avto-decr (6).png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="avto-description left owl-carousel">
-            <div class="avto-description_item">
-                <div class="container d-flex justify-content-end">
-                    <div class="avto-description_text">
-                        <h6>Экстерьер</h6>
-                        <p>Chevrolet Onix впечатляет на дороге своим ярким внешним видом.</p>
-                        <p>Плавные горизонтальные линии на кузове подчёркивают стильный современный дизайн автомобиля, а футуристичная светотехника модели привлекает взгляды окружающих и впечатляет автолюбителей.</p>
-                    </div>
-                </div>
-                <div class="avto-description_img">
-                    <img src="image/avto-decr/avto-decr (4).png" alt="">
-                </div>
-            </div>
-            <div class="avto-description_item">
-                <div class="container d-flex justify-content-end">
-                    <div class="avto-description_text">
-                        <h6>Экстерьер</h6>
-                        <p>Для освещения дорог  используются светодиодные дневные ходовые огни, прожекторы и светодиодные задние фонари.</p>
-                        <p>Также для безопасности установлена автоматическая функция освещения фар с использованием датчиков сумерек.</p>
-                    </div>
-                </div>
-                <div class="avto-description_img">
-                    <img src="image/avto-decr/avto-decr (5).png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="avto-description owl-carousel">
-            <div class="avto-description_item">
-                <div class="container">
-                    <div class="avto-description_text">
-                        <h6>Интерьер</h6>
-                        <p>Внутреннее пространство в автомобиле Onix выглядит элегантно, современно, надёжно и встречает своих обитателей продуманной эргономикой.</p>
-                        <p>В нем присутствует трехспицевый мультируль, понятная комбинация приборов с аналоговыми шкалами и цифровым дисплеем бортового компьютера между ними.</p>
-                        <p>Центральная консоль оборудована 8-дюймовым экраном мультимедийной системы, симметричными дефлекторами вентиляции и компактным блоком климатической установки.</p>
-                    </div>
-                </div>
-                <div class="avto-description_img">
-                    <img src="image/avto-decr/avto-decr (2).png" alt="">
-                </div>
-            </div>
-            <div class="avto-description_item">
-                <div class="container">
-                    <div class="avto-description_text">
-                        <h6>Интерьер</h6>
-                        <p>Багажник имеет сложную форму, но может вместить 469 литров груза.</p>
-                        <p>Второй ряд сидений складывается на две неравные части, что позволяет перевозить длинные предметы через задний проем в салон.</p>
-                    </div>
-                </div>
-                <div class="avto-description_img">
-                    <img src="image/avto-decr/avto-decr (3).png" alt="">
-                </div>
-            </div>
+    <!-- AVTO BTNS -->
+    <a href="#" class="download-price container">Все технические характеристики автомобилей марки Chevrolet Cobalt</a>
+    <section class="container d-flex align-items-center justify-content-center mt-5 flex-lg-row flex-column gap-3 mb-5">
+        <div id="avto-btns" class="avto-btns d-flex gap-3 flex-sm-row flex-column">
+            <a href="#questionsForm">Оставить заявку</a>
+            <a class="text-center" href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a>
         </div>
     </section>
-    <!-- AVTO DESCRIPTIONS END -->
-    <!-- AVTO BTNS -->
-    <section class="container d-flex align-items-center justify-content-between mt-5 flex-lg-row flex-column gap-3">
-        <a href="#" class="download-price mt-0 mb-0 align-self-lg-center align-self-md-start align-self-center">Скачать прайс</a>
-        <div class="avto-btns d-flex gap-3 flex-sm-row flex-column">
-            <button>Оставить заявку</button>
-            <a href="#" data-bs-target="#tradeinModal" data-bs-toggle="modal">Обменять по Trade-in</a>
-        </div>
-        <span></span>
+    <section class="avto-short_content">
+       <div class="container gap-2 d-flex justify-content-between align-items-center">
+            <div class="avto-short_info">
+                <img src="image/small-car.png" alt="">
+                <div class="d-flex flex-column gap-1">
+                    <h6>Chevrolet Cobalt</h6>
+                    <p>163 000 000 сум</p>
+                </div>
+            </div>
+            <div class="avto-btns d-flex gap-3">
+                <a href="#questionsForm">
+                    <p>Оставить заявку</p>
+                    <img src="image/icons/pen-square.svg" alt="">
+                </a>
+                <a class="text-center" href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">
+                    <p>Заказать звонок</p>
+                    <img src="image/icons/phone-incoming.svg" alt="">
+                </a>
+            </div>
+       </div>
     </section>
     <!-- AVTO BTNS END -->
-    <!-- AVTO TEXT -->
-    <section class="avto-text">
-      <p>Измерения времени разгона проведены в стандартных условиях с использованием специализированного оборудования и эталонного топлива. Фактическое время разгона может изменяться из-за различных объективных и субъективных факторов, таких как влажность, давление и температура окружающей среды, состав используемого топлива, рельеф местности, характеристики дорожного покрытия, направление и скорость ветра, атмосферные осадки, давление в шинах, их размеры, марка и модель, масса перевозимого груза (включая водителя и пассажиров) и навыки водителя.</p>
-      <p>Из-за различий в комплектациях автомобилей nехнические характеристики могут отличаться от от указанных выше. Представленные данные о комплектации, технических характеристиках, цветовых сочетаниях, стоимости автомобилей и сервисном обслуживании являются информационными и не являются публичной офертой. Компания Chevrolet оставляет за собой право на внесение изменений в конструкцию и комплектацию автомобилей без предварительного уведомления.</p>
-      <p>Сайт содержит наиболее полную и актуальную информацию на момент размещения.</p>
-      <p>Проверить актуальную информацию о спецификации, опциях и возможности доукомплектации вы можете обратившись в офис компании Olamavto.</p>
-      <p>Для подробной информации о стоимости, спецификации, технических характеристиках и наличии автомобилей оставьте заявку на сайте или закажите обратный звонок. Наш менеджер свяжется с вами в течение одного рабочего дня и ответит на все ваши вопросы, а также поможет определится с выбором автомобиля, согласно вашим пожеланиям</p>
-      <a href="#" class="avto-text_btn">Развернуть описание</a>
+    <!-- INFORMATION -->
+    <section class="information">
+        <h2 class="title container">Информация от продавца</h2>
+        <div class="information-back"></div>
+        <div class="information-img">
+            <img src="image/info.png" alt="">
+        </div>
+        <div class="information-content container">
+            <div class="information-text">
+                <h6>Olamavto — сервис для обмена вашего текущего автомобиля на новый. А также онлайн-площадка по продаже автомобилей с пробегом. Ждём всех желающих купить новый автомобиль Chevrolet или автомобиль с пробегом и гарантией</h6>
+                <h6 class="mt-xxl-5 mt-4">г. Ташкент, Яшнабадский район, ул. Элбека, 61/3</h6>
+                <a href="/">Показать на карте</a>
+                <p>Предложение не является публичной офертой. Указанная стоимость автомобиля не является окончательной, так как может не учитывать стоимость установленного дополнительного оборудования и комплектацию автомобиля. Информацию о наличии автомобиля, его стоимости и комплектации уточняйте в офисе компании.</p>
+            </div>
+            <a class="text-center callback-btn" href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a>
+        </div>
     </section>
-    <!-- AVTO TEXT END -->
+    <!-- INFORMATION END -->
+    <!-- SIMILAR OFFERS -->
+    <section class="container similar-offers">
+        <h2 class="title">Похожие предложения</h2>
+        <div class="avto-list">
+            <a href="oldcar.html" class="avto-item">
+                <div class="avto-item_img">
+                    <img src="image/avto/avto (1).png" alt="">
+                    <div class="avto-item_func">
+                        <span id="usedAvto">С пробегом</span>
+                        <span id="credit">Кредит</span>
+                        <span id="new">Новый</span>
+                        <span id="trade-in">Trade-in</span>
+                    </div>
+                </div>
+                <div class="avto-item_info">
+                    <div>
+                        <h5 name="AvtoName">Chevrolet LACETTI</h5>
+                        <p name="AvtoPrice">177 000 000 сум</p>
+                    </div>
+                    <div class="avto-item_info--list">
+                        <ul class="avto-item_info--list_options">
+                            <li>Год выпуска</li>
+                            <li>Пробег, км</li>
+                            <li>Объем, л</li>
+                            <li>Трансмиссия</li>
+                        </ul>
+                        <ul>
+                            <li>2022</li>
+                            <li>4 771</li>
+                            <li>1.5</li>
+                            <li>МКПП</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="oldcar.html" class="avto-item">
+                <div class="avto-item_img">
+                    <img src="image/avto/avto (1).png" alt="">
+                    <div class="avto-item_func">
+                        <span id="usedAvto">С пробегом</span>
+                        <span id="credit">Кредит</span>
+                        <span id="new">Новый</span>
+                    </div>
+                </div>
+                <div class="avto-item_info">
+                    <div>
+                        <h5 name="AvtoName">Chevrolet LACETTI</h5>
+                        <p name="AvtoPrice">177 000 000 сум</p>
+                    </div>
+                    <div class="avto-item_info--list">
+                        <ul class="avto-item_info--list_options">
+                            <li>Год выпуска</li>
+                            <li>Пробег, км</li>
+                            <li>Объем, л</li>
+                            <li>Трансмиссия</li>
+                        </ul>
+                        <ul>
+                            <li>2022</li>
+                            <li>4 771</li>
+                            <li>1.5</li>
+                            <li>МКПП</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="oldcar.html" class="avto-item">
+                <div class="avto-item_img">
+                    <img src="image/avto/avto (1).png" alt="">
+                    <div class="avto-item_func">
+                        <span id="usedAvto">С пробегом</span>
+                        <span id="credit">Кредит</span>
+                        <span id="new">Новый</span>
+                    </div>
+                </div>
+                <div class="avto-item_info">
+                    <div>
+                        <h5 name="AvtoName">Chevrolet LACETTI</h5>
+                        <p name="AvtoPrice">177 000 000 сум</p>
+                    </div>
+                    <div class="avto-item_info--list">
+                        <ul class="avto-item_info--list_options">
+                            <li>Год выпуска</li>
+                            <li>Пробег, км</li>
+                            <li>Объем, л</li>
+                            <li>Трансмиссия</li>
+                        </ul>
+                        <ul>
+                            <li>2022</li>
+                            <li>4 771</li>
+                            <li>1.5</li>
+                            <li>МКПП</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="oldcar.html" class="avto-item">
+                <div class="avto-item_img">
+                    <img src="image/avto/avto (1).png" alt="">
+                    <div class="avto-item_func">
+                        <span id="usedAvto">С пробегом</span>
+                        <span id="credit">Кредит</span>
+                        <span id="new">Новый</span>
+                    </div>
+                </div>
+                <div class="avto-item_info">
+                    <div>
+                        <h5 name="AvtoName">Chevrolet LACETTI</h5>
+                        <p name="AvtoPrice">177 000 000 сум</p>
+                    </div>
+                    <div class="avto-item_info--list">
+                        <ul class="avto-item_info--list_options">
+                            <li>Год выпуска</li>
+                            <li>Пробег, км</li>
+                            <li>Объем, л</li>
+                            <li>Трансмиссия</li>
+                        </ul>
+                        <ul>
+                            <li>2022</li>
+                            <li>4 771</li>
+                            <li>1.5</li>
+                            <li>МКПП</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="oldcar.html" class="avto-item">
+                <div class="avto-item_img">
+                    <img src="image/avto/avto (1).png" alt="">
+                    <div class="avto-item_func">
+                        <span id="usedAvto">С пробегом</span>
+                        <span id="credit">Кредит</span>
+                        <span id="new">Новый</span>
+                    </div>
+                </div>
+                <div class="avto-item_info">
+                    <div>
+                        <h5 name="AvtoName">Chevrolet LACETTI</h5>
+                        <p name="AvtoPrice">177 000 000 сум</p>
+                    </div>
+                    <div class="avto-item_info--list">
+                        <ul class="avto-item_info--list_options">
+                            <li>Год выпуска</li>
+                            <li>Пробег, км</li>
+                            <li>Объем, л</li>
+                            <li>Трансмиссия</li>
+                        </ul>
+                        <ul>
+                            <li>2022</li>
+                            <li>4 771</li>
+                            <li>1.5</li>
+                            <li>МКПП</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <a href="oldcar.html" class="avto-item">
+                <div class="avto-item_img">
+                    <img src="image/avto/avto (1).png" alt="">
+                    <div class="avto-item_func">
+                        <span id="usedAvto">С пробегом</span>
+                        <span id="credit">Кредит</span>
+                        <span id="new">Новый</span>
+                    </div>
+                </div>
+                <div class="avto-item_info">
+                    <div>
+                        <h5 name="AvtoName">Chevrolet LACETTI</h5>
+                        <p name="AvtoPrice">177 000 000 сум</p>
+                    </div>
+                    <div class="avto-item_info--list">
+                        <ul class="avto-item_info--list_options">
+                            <li>Год выпуска</li>
+                            <li>Пробег, км</li>
+                            <li>Объем, л</li>
+                            <li>Трансмиссия</li>
+                        </ul>
+                        <ul>
+                            <li>2022</li>
+                            <li>4 771</li>
+                            <li>1.5</li>
+                            <li>МКПП</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- SIMILAR OFFERS END -->
+    <!-- NEW AVTO -->
+    <section class="container">
+        <h2 class="title">Новые авто</h2>
+        <div class="newavto-slider owl-carousel">
+            <div class="newavto-slider_item">
+                <div class="newavto-slider_item--img"><img src="image/avto/onix.png" alt=""></div>
+                <span>Chevrolet Onix</span>
+                <div class="newavto-slider_item--text">
+                    <div>
+                        <h6>В ритме города</h6>
+                        <p>Популярный компактный автомобиль, обладающий современным дизайном и привлекательной ценой<br><br>
+                            Доступен в нескольких вариантах комплектации и оснащён различными опциями для удовлетворения потребностей покупателей</p>
+                    </div>
+                    <div class="newavto-slider_item--btns">
+                        <a href="/">Подробнее о модели</a>
+                        <a href="/" class="link-to-page">Все новые авто</a>
+                    </div>
+                </div>
+            </div>
+            <div class="newavto-slider_item">
+                <div class="newavto-slider_item--img"><img src="image/avto/nexia.png" alt=""></div>
+                <span>Chevrolet Nexia</span>
+                <div class="newavto-slider_item--text">
+                    <div>
+                        <h6>В ритме города</h6>
+                        <p>Популярный компактный автомобиль, обладающий современным дизайном и привлекательной ценой<br><br>
+                            Доступен в нескольких вариантах комплектации и оснащён различными опциями</p>
+                    </div>
+                    <div class="newavto-slider_item--btns">
+                        <a href="/">Подробнее о модели</a>
+                        <a href="/">Все новые авто</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- NEW AVTO END -->
     <!-- OLAM INFO -->
     <section class="container">
       <div class="olam-info_slider owl-carousel">
@@ -388,8 +582,27 @@
       </div>
     </section>  
     <!-- OLAM INFO END -->
+    <!-- POPULAR AVTO -->
+    <section class="container popular-avto">
+        <h6>Популярные авто</h6>
+        <div class="popular-avto_links">
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+            <a href="/">Chevrolet Spark</a>
+        </div>
+    </section>
+    <!-- POPULAR AVTO END -->
     <!-- QUESTIONS -->
-    <section class="questions">
+    <section class="questions" id="questionsForm">
         <div>
             <img class="questions-img_circle" src="image/form-circle.svg" alt="">
             <img class="questions-img_car" src="image/form-img.png" alt="">

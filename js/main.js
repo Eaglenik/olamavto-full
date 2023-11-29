@@ -367,7 +367,49 @@ $(document).ready(function() {
         return false;
     });
 });
-$('.avto-btns a').click(function() {
-    return false
+// $('.avto-btns a').click(function() {
+//     return false
+// })
+// FIXED BTNS
+$(document).ready(function() {
+    var avtoBtns = $('#avto-btns');
+    var avtoShortInfo = $('.avto-short_content');
+    var avtoBtnsTop = avtoBtns.offset().top;
+    $(window).on('scroll', function() {
+        var scrollPosition = $(this).scrollTop();
+        if (scrollPosition >= avtoBtnsTop) {
+            avtoShortInfo.addClass('show')
+        } else {
+            avtoShortInfo.removeClass('show')
+        }
+    });
+});
+// trade-in animation
+$(document).ready(function() {
+    var isTouchDevice = ('ontouchstart' in window || navigator.maxTouchPoints);
+    if (isTouchDevice) {
+      var blocks = [];
+      for (var i = 1; i <= 5; i++) {
+        var block = document.getElementById(`tradeInAnimationItem${i}`);
+        blocks.push(block);
+      }
+      var currentBlockIndex = 0;
+      window.addEventListener('scroll', function() {
+        var viewportHeight = window.innerHeight;
+        for (var i = blocks.length - 1; i >= 0; i--) {
+          var blockTop = blocks[i].getBoundingClientRect().top;
+          if (blockTop < viewportHeight) {
+            currentBlockIndex = i;
+            break;
+          }
+        }
+        for (var j = 0; j < blocks.length; j++) {
+          if (j === currentBlockIndex) {
+            blocks[j].classList.add('hover-effect');
+          } else {
+            blocks[j].classList.remove('hover-effect');
+          }
+        }
+      });
+    }
 })
-// rate car form

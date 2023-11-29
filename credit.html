@@ -53,7 +53,7 @@
                 <div class="dropdown">
                     <a class="phoneDropdown" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
                     <ul class="dropdown-menu">
-                        <li><a href="/">Заказать звонок</a></li>
+                        <li><a href="№" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a></li>
                       <li><a href="1312">Позвонить</a></li>
                     </ul>
                   </div>
@@ -100,7 +100,7 @@
                         <div class="dropdown">
                             <a class="phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
                             <ul class="dropdown-menu">
-                                <li><a href="/">Заказать звонок</a></li>
+                                <li><a href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a></li>
                               <li><a href="tel:1312">Позвонить</a></li>
                             </ul>
                           </div>
@@ -111,6 +111,36 @@
           </div>
     </header>
     <div class="header-line"></div>
+    <div class="modal fade" id="callBackModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered ratecarModal">
+        <div class="modal-content">
+          <div class="container ratecarModal-content callback">
+              <div class="d-flex justify-content-between flex-md-row flex-column-reverse align-items-md-start align-items-end">
+                  <h3 class="title">Воплотите свои мечты!</h3>
+                  <button class="ratecarModal-closeBtn" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                      <img src="image/icons/rate-x.png" alt="" class="mt-0">
+                  </button>
+              </div>
+              <h6>Оставьте заявку и cтаньте обладателем нового автомобиля!</h6>
+              <div class="d-flex gap-4 justify-content-xl-start justify-content-around">
+                <img src="image/callback.png" alt="">
+                <form action="url" class="callback-form">
+                  <div class="callback-form_content gap-2">
+                    <input type="text" placeholder="Имя" required>
+                    <input type="text" placeholder="+998 Телефон" data-phone-pattern="" required>
+                    <div class="callback-form_checkbox">
+                      <input type="checkbox" id="callbackFormCheckbox">
+                      <label for="callbackFormCheckbox">Я согласен(а) на обработку персональных данных</label>
+                    </div>
+                    <span class="captcha">Капча</span>
+                    <button type="submit" id="callbackFormSubmitBtn">Оставить заявку</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- HEADER END -->
     <!-- CREDITS -->
     <section class="container">
@@ -123,7 +153,7 @@
           </div>
           <div class="credit-btns d-lg-block d-none">
             <a href="#">Оставить заявку</a>
-            <button type="button">Заказать звонок</button>
+            <button type="button" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</button>
           </div>
         </div>
         <div class="credit-options">
@@ -147,7 +177,7 @@
         </div>
         <div class="credit-btns d-lg-none d-flex justify-content-center gap-3 align-items-center flex-wrap">
             <a href="#">Оставить заявку</a>
-            <button type="button" class="mt-0">Заказать звонок</button>
+            <button type="button" class="mt-0" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</button>
           </div>
       </div>
       <h5 class="title">Автокредит от Anor Bank</h5>
@@ -159,7 +189,7 @@
           </div>
           <div class="credit-btns d-lg-block d-none">
             <a href="#">Оставить заявку</a>
-            <button type="button">Заказать звонок</button>
+            <button type="button" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</button>
           </div>
         </div>
         <div class="credit-options">
@@ -181,7 +211,7 @@
         </div>
         <div class="credit-btns d-lg-none d-flex justify-content-center gap-3 align-items-center flex-wrap">
             <a href="#">Оставить заявку</a>
-            <button type="button" class="mt-0">Заказать звонок</button>
+            <button type="button" class="mt-0" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</button>
           </div>
       </div>
       <h5 class="title">Автокредит от Kapital Bank</h5>
@@ -193,7 +223,7 @@
           </div>
           <div class="credit-btns d-lg-block d-none">
             <a href="#">Оставить заявку</a>
-            <button type="button">Заказать звонок</button>
+            <button type="button" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</button>
           </div>
         </div>
         <div class="credit-options">
@@ -215,7 +245,7 @@
         </div>
         <div class="credit-btns d-lg-none d-flex justify-content-center gap-3 align-items-center flex-wrap">
             <a href="#">Оставить заявку</a>
-            <button type="button" class="mt-0">Заказать звонок</button>
+            <button type="button" class="mt-0" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</button>
           </div>
       </div>
     </section>
@@ -229,7 +259,7 @@
                         <div class="dropdown">
                             <a class="footer-phone" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">1312</a>
                             <ul class="dropdown-menu">
-                                <li><a href="/">Заказать звонок</a></li>
+                                <li><a href="#" data-bs-target="#callBackModal" data-bs-toggle="modal">Заказать звонок</a></li>
                               <li><a href="tel:1312">Позвонить</a></li>
                             </ul>
                         </div>

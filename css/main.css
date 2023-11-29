@@ -22,6 +22,7 @@
 .main-slider_form--tabs::-webkit-scrollbar{
     display: none;
 }
+
 h1,h2,h3,h4,h5,h6,p,ul,li{
     padding: 0;
     margin: 0;
@@ -134,7 +135,7 @@ a{
     transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
     opacity: 0;
     visibility: hidden;
-    z-index: 1000;
+    z-index: 100;
     font-size: 22px;
     /* border: 2px solid var(--white2); */
     background: var(--white1);
@@ -557,7 +558,8 @@ button{
 .about-company,
 .olam-info_slider,
 .autoblog-slider,
-.popular-avto{
+.popular-avto,
+.oldcar{
     margin-bottom: 150px;
 }
 .about_trade-in h6,
@@ -687,7 +689,8 @@ button{
     padding-top: 140px;
 }
 .autoblog-slider_item span,
-.newavto-slider_item span{
+.newavto-slider_item span,
+.oldcar-content span{
     color: var(--txt-black, #262627);
     font-family: RF Dewi Extended;
     font-style: normal;
@@ -709,15 +712,16 @@ button{
 .newavto-slider_item--text h6{
     max-width: unset;
 }
-.newavto-slider_item--btns a{
-    color: var(--white1);
+.newavto-slider_item--btns a,
+.main-slider_text a{
+    color: var(--red3);
     font-family: RF Dewi Extended;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
     border-radius: 100px;
-    background: var(--red3);
+    /* background: var(--red3); */
     padding: 11px 30px 17px 30px;
     text-align: center;
     border: 1.5px solid var(--red3);
@@ -899,6 +903,11 @@ button{
     border-right: 1px solid var(--green2);
     border-left: 1px solid var(--green2);
     color: var(--green2);
+}
+#trade-in{
+    color: var(--black);
+    border-right: 1px solid var(--black);
+    border-left: 1px solid var(--black);
 }
 .avto-item_info,
 .oldavto-item_info{
@@ -1389,6 +1398,9 @@ button{
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.custom-accordion-arrow{
+    transition: all 0.5s ease;
 }
 .custom-accordion .custom-accordion-item.active .custom-accordion-header .custom-accordion-arrow img{
   transform: rotate(180deg);
@@ -1885,7 +1897,8 @@ button{
     gap: 30px;
     max-width: 460px;
 }
-.avto-equipment_item h6{
+.avto-equipment_item h6,
+.oldcar-text h6{
     color: var(--red3);
     font-family: RF Dewi Extended;
     font-size: 40px;
@@ -2013,7 +2026,9 @@ button{
     color: var(--white2);
 }
 .avto-btns button,
-.avto-btns a{
+.avto-btns a,
+.callback-btn{
+    display: block;
     width: 290px;
     font-family: RF Dewi Extended;
     font-size: 18px;
@@ -2023,25 +2038,64 @@ button{
     border-radius: 100px;
     padding: 11px 30px 17px 30px;
 }
-.avto-btns a{
+.avto-btns a,
+.callback-btn{
     color: var(--grey1);
     border:1px solid var(--grey1);
 }
-.avto-btns button,
+.avto-btns a:first-of-type,
 #callbackFormSubmitBtn{
     color: var(--white1);
     border:1px solid var(--red3);
     outline: none;
     background: var(--red3);
+    text-align: center;
 }
-.avto-btns.fixed{
+.avto-short_content{
     width: 100%;
     position: fixed;
-    bottom: 0;
+    bottom: -150px;
     right: 0;
+    transition: all 0.3s ease;
     justify-content: center;
     background: var(--white1);
-    padding: 25px;
+    border-top: 1px solid var(--grey3);
+    padding: 25px 0;
+    z-index: 101;
+}
+.avto-short_content.show{
+    bottom: 0;
+}
+.avto-short_info{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 340px;
+}
+.avto-btns img{
+    display: none;
+}
+.avto-short_info img{
+    max-width: 96px;
+    width: 100%;
+    object-fit: cover;
+}
+.avto-short_info h6{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.avto-short_info p{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .tradeinModal{
     border-radius: unset;
@@ -2093,6 +2147,8 @@ button{
     border-radius: 0;
     /* border: none; */
     height: 100%;
+    min-height: 100vh;
+    justify-content: center;
 }
 .ratecarModal-content{
     margin-top: 90px;
@@ -2254,7 +2310,8 @@ button{
     line-height: normal;
     margin-bottom: 30px;
 }
-.credit p{
+.credit p,
+.oldcar-text p{
     color: var(--black);
     font-size: 18px;
     font-style: normal;
@@ -2366,4 +2423,327 @@ button{
     margin-top: 50px;
     max-width: 704px;
     width: 100%;
+}
+/* oldcar */
+.oldcar{
+    position: relative;
+}
+.oldcar-img{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 69%;
+    max-width: 1313px;
+}
+.oldcar-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 650px;
+}
+.oldcar-content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    z-index: 2;
+}
+.oldcar-text{
+    display: flex;
+    flex-direction: column;
+    max-width: 337px;
+}
+.oldcar-content span{
+    position: relative;
+}
+.oldcar-text h6{
+    color: var(--txt-black, #262627);
+    margin-top: 30px;
+}
+.oldcar-text h5{
+    color: var(--grey1);
+    font-family: RF Dewi Extended;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 40px;
+    line-height: 150%;
+}
+.oldcar-options{
+    max-width: 890px;
+    width: 100%;
+    margin-top: 40px;
+}
+.oldcar-options .avto-options_list li{
+    width: 48%;
+}
+.oldcar-options .avto-options_list{
+    max-height: 660px;
+    flex-wrap: wrap;
+}
+.oldcar-back{
+    max-height: 870px;
+    width: 66%;
+}
+.oldcar-equipment p{
+    color: var(--grey1);
+}
+.oldcar-equipment h5,
+.oldcar-equipment span{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.oldcar-equipment span{
+    font-size: 28px;
+}
+.similar-offers{
+    margin: 150px auto;
+}
+/* information */
+.information{
+    position: relative;
+    margin-top: 100px;
+}
+.information-back,
+.information-img{
+    position: absolute;
+}
+.information-img{
+    top: 70px;
+    right: 0;
+}
+.information-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.information-back{
+    display: block;
+    left: 0;
+    top: 100px;
+    background: var(--white2);
+    width: 69%;
+    z-index: 1;
+    height: 80%;
+    min-width: 1012px;
+}
+.information-content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 40px 30px;
+}
+.information-text{
+    max-width: 980px;
+}
+.callback-btn{
+    background: var(--white1);
+}
+.information-text h6{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.information-text a{
+    color: var(--grey1);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    display: block;
+    margin-bottom: 65px;
+}
+.information-text p{
+    color: var(--grey1);
+    font-size: 15px;
+    font-style: normal;
+    line-height: 150%;
+    padding-top: 30px;
+    border-top: 1px solid var(--grey3);
+}
+.trade-in{
+    margin-bottom: 150px;
+}
+.trade-in_img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 61%;
+    height: 550px;
+}
+.trade-in_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.trade-in .main-slider_text{
+    padding-bottom: 100px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+.trade-in_info{
+    margin-bottom: 150px;
+}
+.trade-in_info h2{
+    max-width: 460px;
+}
+.trade-in_info h6{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+    max-width: 950px;
+}
+/* trade-in-accordion */
+.trade-in-accordion{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.trade-in-accordion .title,
+.trade-in_animation .title{
+    max-width: 464px;
+}
+.trade-in-accordion .custom-accordion,
+.trade-in_animation--content{
+    max-width: 950px;
+    width: 100%;
+}
+.trade-in-accordion .custom-accordion-header{
+    justify-content: space-between;
+    cursor: pointer;
+}
+.trade-in-accordion .custom-accordion-item.active .custom-accordion-arrow{
+    rotate: 45deg;
+}
+.trade-in-accordion .custom-accordion-item.active .custom-accordion-arrow path{
+    fill: var(--green2);
+}
+.trade-in-accordion .custom-accordion-item.active h5{
+    color: var(--green2);
+    font-weight: 700;
+}
+.trade-in-accordion h5{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+.trade-in-accordion p{
+    color: var(--txt-black, #262627);
+    font-size: 20px;
+    font-style: normal;
+    line-height: 150%;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+/* trade-in animation */
+.trade-in_animation--circle{
+    -moz-border-radius: 50px/50px;
+    -webkit-border-radius: 50px 50px;
+    -webkit-animation: rotation 3s linear infinite;
+    -moz-animation: rotation 3s linear infinite;
+    -ms-animation: rotation 3s linear infinite;
+    position: absolute;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    /* top: 40%; */
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+@-webkit-keyframes rotation {
+    0%   { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(-360deg); }
+}
+@-moz-keyframes rotation {
+    0%   { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(-360deg); }
+}
+@-ms-keyframes rotation {
+    0%   { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(-360deg); }
+}
+.trade-in_animation{
+    display: flex;
+    justify-content: space-between;
+}
+.trade-in_animation--item{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.trade-in_animation--item:hover .trade-in_animation--circle{
+    opacity: 1;
+}
+.trade-in_animation--item p{
+    color: var(--txt-black, #262627);
+    font-family: RF Dewi Extended;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    max-width: 640px;
+}
+.trade-in_animation--item:hover p{
+    font-weight: bolder;
+}
+.trade-in_animation--imgs{
+    position: relative;
+    min-width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px dashed var(--white2);
+}
+.trade-in_animation--content{
+    display: flex;
+    flex-direction: column;
+    /* gap: 100px; */
+}
+.trade-in_animation .title{
+    position: sticky;
+    top: 40%;
+    height: 120px;
+    margin: 0;
+}
+.tradein-animation_line{
+    padding: 10px 0 10px 60px;
+}
+.tradein-btns{
+    display: flex;
+    justify-content: end;
+    margin: 110px auto;
+    gap: 30px;
+}
+.tradein-btns a,
+.tradein-btns button{
+    border-radius: 100px;
+    background: var(--red3);
+    padding: 11px 60px 17px 60px;
+    color: var(--white1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+.tradein-btns button{
+    border: 1px solid var(--green2);
+    color: var(--green2);
+    background: none;
 }
