@@ -367,9 +367,6 @@ $(document).ready(function() {
         return false;
     });
 });
-// $('.avto-btns a').click(function() {
-//     return false
-// })
 // FIXED BTNS
 $(document).ready(function() {
     var avtoBtns = $('#avto-btns');
@@ -413,3 +410,17 @@ $(document).ready(function() {
       });
     }
 })
+// rate car slider
+$(document).ready(function() {
+    $(".ratecarModal-form .custom-options span").click(function() {
+      $(".ratecarModal-form .custom-options span").removeClass("active");
+      $(".ratecarModal-car img").removeClass("active");
+      $(this).addClass("active");
+      var index = $(this).index();
+      $(".ratecarModal-car img").eq(index).addClass("active");
+      return false;
+    });
+});
+// $('.avto-btns a').click(function() {
+//     return false
+// })

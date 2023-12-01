@@ -2152,6 +2152,7 @@ button{
 }
 .ratecarModal-content{
     margin-top: 90px;
+    margin-bottom: 90px;
 }
 .ratecarModal-closeBtn{
     padding: 0;
@@ -2701,6 +2702,11 @@ button{
 .trade-in_animation--item:hover p{
     font-weight: bolder;
 }
+#tradeInAnimationItem5 p ,
+#tradeInAnimationItem5 p strong{
+    font-family: RF Dewi Extended;
+    font-weight: bolder;
+}
 .trade-in_animation--imgs{
     position: relative;
     min-width: 125px;
@@ -2746,4 +2752,56 @@ button{
     border: 1px solid var(--green2);
     color: var(--green2);
     background: none;
+}
+/* ratecarmodal */
+.ratecarModal-imgs{
+    position: relative;
+    padding-bottom: 30px;
+    max-width: 704px;
+}
+.ratecarModal-car img{
+    position: absolute;
+    width: 95%;
+    top: 95px;
+    right: 30px;
+    display: none;
+}
+.ratecarModal-car img.active{
+    display: block;
+}
+#ratecarModalRed{
+    position: absolute;
+    right: 121px;
+    bottom: 0;
+    z-index: 2;
+}
+.ratecarModal-form{
+    max-width: 706px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: start;
+    row-gap: 40px;
+}
+.ratecarModal-form .custom-select-wrapper{
+    width: 48%;
+}
+#ratecarModal-btn{
+    color: var(--white1);
+    font-family: RF Dewi Extended;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    border-radius: 100px;
+    opacity: 0.3;
+    background: var(--color-green-dark, #7D7D04);
+    border: none;
+    outline: none;
+    pointer-events: none;
+}
+#ratecarModal-btn.active{
+    opacity: 1;
+    pointer-events: all;
 }

@@ -123,12 +123,46 @@
                 </div>
                 <div class="">
                     <p>Узнайте предварительную стоимость своего автомобиля и заплатите меньше за новый!</p>
-                    <div class="">
+                    <div class="d-flex justify-content-between">
                         <div class="ratecarModal-imgs">
-                            <img src="" alt="">
+                            <img src="image/formRateCar (1).png" alt="">
+                            <img id="ratecarModalRed" src="image/formRateCar (3).png" alt="">
+                            <div class="ratecarModal-car">
+                                <img src="image/formRateCar (2).png" alt="" class="active">
+                                <img src="image/avto/onix (5).png" alt="">
+                                <img src="image/formRateCar (2).png" alt="">
+                            </div>
                         </div>
-                        <form action="" class="">
-                            
+                        <form action="url" class="ratecarModal-form">
+                            <select name="brand" id="brand" class="custom-select" placeholder="Марка" data-brand="true">
+                                <option value="Chevrolet" class="brand">Chevrolet</option>
+                            </select>
+                            <select name="model" id="model" class="custom-select modelList disabled" placeholder="Модель" data-brand="true">
+                                <option value="Onix" class="model">Onix</option>
+                                <option value="Nexia" class="model">Nexia</option>
+                                <option value="Nexia" class="model">Nexia</option>
+                            </select>
+                            <select name="year" id="year" class="custom-select disabled modelList" placeholder="Год выпуска" data-brand="true">
+                                <option value="Chevrolet" class="year">2222</option>
+                            </select>
+                            <select name="mile" id="mile" class="custom-select modelList disabled" placeholder="Пробег, км" data-brand="true">
+                                <option value="Onix" class="mile">On555ix</option>
+                            </select>
+                            <select name="fuel" id="fuel" class="custom-select disabled modelList" placeholder="Тип топлива" data-brand="true">
+                                <option value="Chevrolet" class="fuel">benz</option>
+                            </select>
+                            <select name="privod" id="privod" class="custom-select modelList disabled" placeholder="Модель" data-brand="true">
+                                <option value="Onix" class="privod">Onix</option>
+                                <option value="Nexia" class="privod">Nexia</option>
+                            </select>
+                            <select name="transm" id="transm" class="custom-select disabled modelList" placeholder="Трансмиссия" data-brand="true">
+                                <option value="Chevrolet" class="transm">Chevrolet</option>
+                            </select>
+                            <select name="rate" id="rate" class="custom-select modelList disabled" placeholder="Состояние" data-brand="true">
+                                <option value="Onix" class="rate">Onix</option>
+                                <option value="Nexia" class="rate">Nexia</option>
+                            </select>
+                            <button id="ratecarModal-btn" type="submit">Рассчитать стоимость</button>
                         </form>
                     </div>
                 </div>
